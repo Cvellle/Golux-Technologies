@@ -1,0 +1,333 @@
+.footer {
+    padding-top:5%;
+    padding-left:19%;
+    padding-right:18%;
+    background: #f4f8f9;
+}
+
+.logo {
+    width:23%;
+    position: relative;
+    transform: translate(0,-50%);
+}
+
+.arrowup {
+    width:40%;
+    cursor: pointer;
+    position: relative;
+    transform: translate(0,-50%);
+}
+
+.footerContent {
+    margin-top:2%;
+    margin-bottom:3%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid lightgray;    
+}
+
+.footerContent img {
+    width:5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.footerButtons p {
+    margin-bottom: 0 !important;
+}
+
+
+.mob {
+    width:3.5% !important;
+    margin-right: 4.5% !important;
+}
+
+.footerContent p {
+    font-size: 1vw !important;
+}
+
+.footerButtons>div {
+    padding:2%;
+}
+
+.footerContent button {
+    color:#134173;
+    font-weight: 900;
+    height:3rem;
+    border:none;
+    border-radius: 0.5rem;
+    background: white !important; 
+}
+
+.footerContent input {
+    color:#134173;
+    border:none;
+    border-radius: 0.5rem;
+}
+
+.footerContent .half {
+    width:48%;
+}
+
+.subscrFooter {
+    padding:5%;
+}
+
+.subscrFooter input {
+    width:53%;
+}
+
+.subscrFooter button {
+    width:43%;
+}
+
+.firstColumn {
+    padding-left:0 !important;
+}
+
+.footerLinks1 {
+    transform: translate(15%,0);
+    margin-right: 15%;
+}
+
+.footerLinks2 {
+    transform: translate(20%,0);
+}
+
+.blueContact1 {
+    margin-top: 20%;
+}
+
+.blueContact2 {
+    margin-bottom: 15%;
+}
+
+.blueContact1, .blueContact2 {
+    color:#134173 !important;
+}
+
+.footerLinks p:hover {
+    color:#134173;
+    cursor: pointer;
+}
+
+.footer p {
+    color:rgba(128, 128, 128, 0.801);
+}
+
+.footerButtons {
+    width:37%;
+}
+
+.underFooter {
+    padding-bottom: 8%;
+    color:rgba(128, 128, 128, 0.801);
+}
+
+.underFooter i {
+    font-size:2vw;
+    opacity: 0.7;
+    margin-left:10%;
+    margin-right:10%;
+    transform: translate(-200%,0);
+}
+
+.underFooter span {
+    margin-left:5%;
+    margin-right:5%;
+    font-size:1vw;
+}
+
+.footer p {
+    font-size: 0.85vw !important;
+}
+
+.underFooter, .underFooter span {
+    font-size: 0.85vw !important;
+}
+
+.footerContent input {
+    padding-left:5%;
+}
+
+
+
+@media screen and (max-width:575px) {
+
+    .footer {
+        padding-top:30vw;
+        padding-left:0vw;
+        padding-right:0vw;
+    }
+
+    .logo {
+        width:60vw;
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        position: relative;
+        transform: translate(0,-50%);
+    }
+    
+    .footerContent {
+        margin-top:2vw;
+        margin-bottom:3%;
+        width:76vw;
+        padding-bottom: 0%;
+        border-bottom: 1px solid gray;    
+    }
+    
+    .firstColumn {
+        font-size: 24vw !important;
+        padding-left:0vw !important;
+    }
+
+
+    .footerDescr {
+        line-height: 9.5vw;
+    }
+
+
+    .footerLinks1 {
+        margin-top: 15vw;
+        padding-bottom: 10vw;
+        font-size: 7vw !important;
+        font-weight: 600;
+        line-height: 10.5vw;
+        display: block;
+        margin-left:auto;
+        margin-right:auto !important;
+        color:blue;
+        width:30vw;
+        transform: translate(0) !important;
+        border-bottom: 1vw solid gray;
+    }
+    
+    .footerLinks2 {
+        margin-top: 10vw;
+        line-height: 14vw;
+        color:blue;
+        transform: translate(0) !important;
+    }
+    
+    .blueContact1 {
+        margin-top: 9vw;
+    }
+    
+    .blueContact2 {
+        margin-bottom: 9vw;
+    }
+    
+    .blueContact1, .blueContact2 {
+        color:blue
+    }
+    
+    .footerButtons {
+        margin-top: 20vw;
+        width:76vw;
+    }
+
+    .footerContent img {
+        width: 7vw;
+        margin-top:1vw;
+        margin-bottom:1vw;
+        margin-left:3vw;
+        margin-right:8vw;
+    }
+    
+    .mob {
+        width:5vw !important;
+        margin-right: 8vw !important;
+    }
+    
+    .footerContent p {
+        font-size: 5vw !important;
+    }
+    
+    .footerContent button {
+        width:100%;
+        height: 15vw;
+        font-size: 6vw;
+        font-weight: 600;
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom: 10vw;
+        border-radius: 0.5rem;
+    }
+    
+    .footerContent input {
+        padding-left:5vw;
+        border:none;
+        border-radius: 0.5rem;
+    }
+    
+    .footerContent .half {
+        height: 15vw;
+        font-size: 6vw;
+        font-weight: 600;
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:7vw;
+        width:100%;
+    }
+    
+    .subscrFooter input {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        height: 15vw;
+        width:100%;     
+
+    }
+    
+    .subscrFooter button {
+        font-size: 6vw;
+        font-weight: 600;
+        margin-top: 5vw;
+        width:100%;        
+    }
+
+    .underFooter {
+        display: block;
+        margin-left:auto !important;
+        margin-right:auto !important;
+        padding-left:10vw;
+        padding-right:10vw;
+    }
+
+    .underFooter i {
+        margin-top: 10vw;
+        width:35%;
+        font-size:10vw;
+        font-weight: 100;
+        opacity: 0.7;
+        margin-left:0%;
+        margin-right:0%;
+        transform: translate(0);
+    }
+    
+    .privacy {
+        margin-top:20vw !important;
+        padding-left:9vw !important;
+        padding-right:9vw !important;
+        width: 100%;
+        font-size: 4vw !important;
+
+    }
+
+    .copyright {
+        margin-top:13vw !important;
+        font-size: 4vw !important;
+    }
+
+    .underFooter, .underFooter span {
+        font-size: 0.85vw !important;
+    }
+    
+    input:focus, button:focus, button:active {
+        outline:0 !important;
+    }
+
+   
+}

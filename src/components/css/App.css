@@ -1,0 +1,32 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+  .App-logo {
+    height: 80px;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  .flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+  
+  .min {
+    min-height:65vh;
+  }
+
+  input:focus, button:focus, button:active, textarea:focus {
+    outline:0 !important;
+}
+
