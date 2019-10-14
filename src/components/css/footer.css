@@ -56,12 +56,14 @@
     border:none;
     border-radius: 0.5rem;
     background: white !important; 
+    margin-bottom:6.5%;
 }
 
 .footerContent input {
     color:#134173;
     border:none;
     border-radius: 0.5rem;
+    margin-bottom:6.5%;    
 }
 
 .footerContent .half {
@@ -94,7 +96,7 @@
 }
 
 .blueContact1 {
-    margin-top: 20%;
+    margin-top: 22%;
 }
 
 .blueContact2 {
@@ -313,7 +315,6 @@
         padding-right:9vw !important;
         width: 100%;
         font-size: 4vw !important;
-
     }
 
     .copyright {

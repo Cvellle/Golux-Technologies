@@ -11,7 +11,6 @@ body {
 .mainscreen {
     position: relative;
     top:0;
-    /* height:97vh; */
     width:100%;
     background-image: url("../../images/main-backg.png");
     background-size:100% 100%;
@@ -24,7 +23,8 @@ body {
 
 h1 {
     color:#164176;
-    font-size: 3.58vw !important;
+    line-height: 4.5vw;
+    font-size: 3.1vw !important;
     font-weight: 900 !important;
     width: 110%;
 }
@@ -47,6 +47,8 @@ h1 {
     color:#164176;
     line-height: 220%;
     font-size: 1.28vw;
+    line-height: 2.5vw;
+    width:80%;
 }
 
 .mainBlockBtn {
@@ -116,6 +118,10 @@ h2 {
     font-size: 1.2vw;
 }
 
+.backend p  {
+    transform: translatex(-15%);
+}
+
 .labDescr + div .dash  {
     width:5.5vw;
     position: relative;
@@ -142,20 +148,36 @@ h2 {
     font-size: 1.2vw;
 }
 
+.lab .dashDiv   {
+    height:0vw;
+}
+
 .lab .dash  {
     width:6.5vw;
     position: relative;
     z-index: 0;
     background:#00ffa3;
     height: auto;
-    height: 1rem;
+    height: 1vw;
     position: relative;
     left: 50%;
     transform: translate(-40%, -100%);
 }
 
+.lab .dashDiv:hover   {
+    transform: translatex(10%);
+    color:black !important;
+    text-decoration: none  !important;;
+}
+
+.lab .dashDiv a:hover   {
+    color:black !important;
+    text-decoration: none  !important;
+    transform: translatex(8%);
+}
+
 .software h3 {
-    color: #164178;
+    color: gray !important;
     font-size: 1.38vw;
     font-weight: 900;
     margin-top:13% !important;
@@ -163,7 +185,7 @@ h2 {
 }
 
 .design h3 {
-    color: #164178;
+    color: gray !important;
     font-size: 1.38vw;
     font-weight: 700;
     margin-top:13% !important;
@@ -185,7 +207,7 @@ h2 {
     height:3.5vw;
     font-size:1.4vw;
     font-weight: 900;
-    width:70%;
+    width:80%;
 }
 
 .card p {
@@ -239,6 +261,8 @@ h2 {
 .play h3 {
     font-size: 1.4vw;
     margin-top:10%;
+    color:#144178;
+    font-weight: 900;
 }
 
 .play p {
@@ -428,10 +452,16 @@ input:focus, .textareaDiv:focus {
 .workAndServ h3 {
     font-size: 1.5vw;
     font-weight: 900;
+    color:rgba(128, 128, 128, 0.781);
+    margin-bottom:1vw;
 }
 
 .workAndServ img {
     width:10vw;
+}
+
+.work img {
+    width:9.4vw;
 }
 
 .submit {
@@ -453,6 +483,7 @@ input:focus, .textareaDiv:focus {
 }
 
 .clients h3 {
+    color: #144178;
     font-size: 2.35vw;
     font-weight: 900;
 }
@@ -753,12 +784,17 @@ input:focus, .textareaDiv:focus {
     }
 
     .lab .dash {
+        position: relative;
+        z-index: 2;
         background:#00ffa3;
         transform: translate(-22vw,-5vw);
+        height: 5vw !important;
         width: 38vw;
     }
     
     .learn {
+        position: relative;
+        z-index: 3 !important;
         font-size: 7vw !important;
     }
 
@@ -772,7 +808,7 @@ input:focus, .textareaDiv:focus {
         z-index: 0;
         background:#00ffa3;
         height: auto;
-        height: 1rem;
+        height: 5vw !important;
         position: relative;
         left: 50%;
         transform: translate(-40%, -190%);
@@ -822,7 +858,7 @@ input:focus, .textareaDiv:focus {
         max-height: 100vw;
         padding: 13vw;
         padding: 13vw;
-        z-index: 1;
+        z-index: 1;      
     }
 
     .software, .design {
@@ -839,6 +875,7 @@ input:focus, .textareaDiv:focus {
         padding-top: 20vw !important;
         padding-bottom: 28vw !important;
     }
+
 
     .play h2 {
         font-size: 8vw !important;

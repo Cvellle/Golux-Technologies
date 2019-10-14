@@ -3,9 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import mainImg from '../images/mainImg.png';
 import hexL from '../images/hexL.png';
 import hexR from '../images/hexR.png';
-import lab1 from '../images/lab1.png';
-import lab2 from '../images/lab2.png';
-import lab3 from '../images/lab3.png';
+import lab1 from '../images/backend.png';
+import lab2 from '../images/frontend.png';
+import lab3 from '../images/mobile.png';
+import lab4 from '../images/design.png';
+import lab5 from '../images/marketing.png';
+import lab6 from '../images/business.png';
 import yes from '../images/yes.svg';
 import play1 from '../images/play1.png';
 import play2 from '../images/play2.png';
@@ -79,7 +82,7 @@ class Home extends React.Component {
           <div className="container software">
               <h3 className="text-center">SOFTWARE DEVELOPMENT</h3>
               <div className="row">
-                <div className="col-12 col-sm-4">
+                <div className="col-12 col-sm-4 backend">
                     <div className="card border-0">
                         <img src={lab1} alt="..." className="card-img mx-auto"/>
                         <div className="caption">
@@ -88,7 +91,7 @@ class Home extends React.Component {
                             <p className="text-left"><img src={yes} className="yes"/>Databases</p>
                             <p className="text-left"><img src={yes} className="yes"/>Administration</p>
                             <div className="clearfix dashDiv">
-                                <div className="price pull-left"></div>
+                              <div className="price pull-left"></div>
                                 <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
                                 <div className="text-center dash"></div>
                             </div>
@@ -103,7 +106,7 @@ class Home extends React.Component {
                             <p className="text-left"><img src={yes} className="yes"/>HTML</p>
                             <p className="text-left"><img src={yes} className="yes"/>CSS</p>
                             <p className="text-left"><img src={yes} className="yes"/>JavaScript</p>
-                            <div className="clearfix dashDiv">
+                              <div className="clearfix dashDiv frontend">
                                 <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
                                 <div className="text-center dash"></div>
                             </div>
@@ -118,7 +121,7 @@ class Home extends React.Component {
                             <p className="text-left"><img src={yes} className="yes"/>Android Apps</p>
                             <p className="text-left"><img src={yes} className="yes"/>IOS Apps</p>
                             <p className="text-left"><img src={yes} className="yes"/>Web Apps</p>
-                            <div className="clearfix dashDiv">
+                            <div className="clearfix dashDiv mobile">
                                 <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
                                 <div className="text-center dash"></div>
                             </div>
@@ -134,7 +137,7 @@ class Home extends React.Component {
               <div className="row">
                 <div className="col-12 col-sm-4">
                     <div className="card border-0">
-                        <img src={lab1} alt="..." className="card-img mx-auto"/>
+                        <img src={lab4} alt="..." className="card-img mx-auto"/>
                         <div className="caption">
                             <div className="cardTitle">
                               <h4 className="text-center mx-auto">DESIGN</h4>
@@ -152,7 +155,7 @@ class Home extends React.Component {
                 </div>
                 <div className="col-12 col-sm-4">
                     <div className="card border-0">
-                        <img src={lab2} alt="..." className="card-img mx-auto"/>
+                        <img src={lab5} alt="..." className="card-img mx-auto"/>
                         <div className="caption">
                             <h4 className="text-center mx-auto">MARKETING & SEO</h4>
                             <p className="text-left"><img src={yes} className="yes"/>HTML</p>
@@ -167,7 +170,7 @@ class Home extends React.Component {
                 </div>
                 <div className="col-12 col-sm-4">
                     <div className="card border-0">
-                        <img src={lab3} alt="..." className="card-img mx-auto"/>
+                        <img src={lab6} alt="..." className="card-img mx-auto"/>
                         <div className="caption">
                             <h4 className="text-center mx-auto">BUSINESS CONSULTING</h4>
                             <p className="text-left"><img src={yes} className="yes"/>Android Apps</p>
@@ -296,21 +299,21 @@ class Home extends React.Component {
                   <div className="flex-wrapper d-flex ml-auto mr-auto">
                     <h3 className="text-center col-12">SERVICES</h3> 
                     <div className="mx-auto">           
-                      <img src={play1} alt="..." className="mx-auto d-block"/>
+                      <img src={lab1} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Backend</p>
-                      <img src={play2} alt="..." className="mx-auto d-block"/>
+                      <img src={lab4} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Design</p>
                     </div>
                     <div className="mx-auto">           
-                      <img src={play1} alt="..." className="mx-auto d-block"/>
+                      <img src={lab3} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Frontend</p>
-                      <img src={play2} alt="..." className="mx-auto d-block"/>
+                      <img src={lab5} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Marketing & SEO</p>
                     </div>
                     <div className="mx-auto">           
-                      <img src={play1} alt="..." className="mx-auto d-block"/>
+                      <img src={lab3} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Mobile dev</p>
-                      <img src={play2} alt="..." className="mx-auto d-block"/>
+                      <img src={lab6} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Business dev</p>
                     </div>
                   </div>
