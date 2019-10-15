@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Lab from './Lab'
+import Subscribe from './Subscribe'
+import Join from './Join'
 import mainImg from '../images/mainImg.png';
-import hexL from '../images/hexL.png';
-import hexR from '../images/hexR.png';
 import lab1 from '../images/backend.png';
 import lab2 from '../images/frontend.png';
 import lab3 from '../images/mobile.png';
@@ -16,8 +18,6 @@ import video from '../images/video.png';
 import yuri from '../images/carouselImg1.png';
 import logo from '../images/logo.png';
 import next from '../images/next.svg';
-import openMail from '../images/openMail.png';
-import goluxWhite from '../images/goluxWhite.png';
 import whiteUp from '../images/whiteUp.svg';
 import './css/App.css'
 import './css/home.css'
@@ -55,138 +55,19 @@ class Home extends React.Component {
                 </p>
               </div>
               <img src={mainImg} className="col-xs-12 d-none d-sm-flex justify-content-end"/>
-            </div>          
+            </div>  
+            <Link to="/presentation">        
               <button className="d-none d-sm-block mainBlockBtn justify-content-start">
                 LEARN MORE
               </button>
               <button className="d-block d-sm-none">
                 LEARN MORE
               </button>
+              </Link>
           </div>  
         </div>
         
-        <div className="lab">
-          <img src={hexL} className="position-absolute hex1"/>
-          <img src={hexR} className="position-absolute hex2"/>
-          <h2 className="text-center">Golux lab</h2>
-          <p className="text-center labDescr mx-auto">
-            We never build something your business doesn't need. Our developers live for the
-            thrill, and break the boundries of digital. By engaging even one developer, you
-            receive an entire machinery of experts to back you up. Whatever the Q, we got the A.
-          </p>
-          <div className="dashdiv text-center mx-auto mx-md-0">
-            <p>our tools</p>
-            <div className="text-center dash"></div>
-          </div>
-
-          <div className="container software">
-              <h3 className="text-center">SOFTWARE DEVELOPMENT</h3>
-              <div className="row">
-                <div className="col-12 col-sm-4 backend">
-                    <div className="card border-0">
-                        <img src={lab1} alt="..." className="card-img mx-auto"/>
-                        <div className="caption">
-                            <h4 className="text-center mx-auto">BACKEND WEB DEVELOPMENT</h4>
-                            <p className="text-left"><img src={yes} className="yes"/>Custom functionalities</p>
-                            <p className="text-left"><img src={yes} className="yes"/>Databases</p>
-                            <p className="text-left"><img src={yes} className="yes"/>Administration</p>
-                            <div className="clearfix dashDiv">
-                              <div className="price pull-left"></div>
-                                <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
-                                <div className="text-center dash"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className="card border-0">
-                        <img src={lab2} alt="..." className="card-img mx-auto"/>
-                        <div className="caption">
-                            <h4 className="text-center mx-auto">FRONTEND WEB DEVELOPMENT</h4>
-                            <p className="text-left"><img src={yes} className="yes"/>HTML</p>
-                            <p className="text-left"><img src={yes} className="yes"/>CSS</p>
-                            <p className="text-left"><img src={yes} className="yes"/>JavaScript</p>
-                              <div className="clearfix dashDiv frontend">
-                                <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
-                                <div className="text-center dash"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className="card border-0">
-                        <img src={lab3} alt="..." className="card-img mx-auto"/>
-                        <div className="caption">
-                            <h4 className="text-center mx-auto">MOBILE DEVELOPMENT</h4>
-                            <p className="text-left"><img src={yes} className="yes"/>Android Apps</p>
-                            <p className="text-left"><img src={yes} className="yes"/>IOS Apps</p>
-                            <p className="text-left"><img src={yes} className="yes"/>Web Apps</p>
-                            <div className="clearfix dashDiv mobile">
-                                <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
-                                <div className="text-center dash"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div className="container design">
-              <h3 className="text-center">DESIGN | MARKETING | CONSULTING</h3>
-              <div className="row">
-                <div className="col-12 col-sm-4">
-                    <div className="card border-0">
-                        <img src={lab4} alt="..." className="card-img mx-auto"/>
-                        <div className="caption">
-                            <div className="cardTitle">
-                              <h4 className="text-center mx-auto">DESIGN</h4>
-                            </div>
-                            <p className="text-left"><img src={yes} className="yes"/>Custom functionalities</p>
-                            <p className="text-left"><img src={yes} className="yes"/>Databases</p>
-                            <p className="text-left"><img src={yes} className="yes"/>Administration</p>
-                            <div className="clearfix dashDiv">
-                                <div className="price pull-left"></div>
-                                <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
-                                <div className="text-center dash"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className="card border-0">
-                        <img src={lab5} alt="..." className="card-img mx-auto"/>
-                        <div className="caption">
-                            <h4 className="text-center mx-auto">MARKETING & SEO</h4>
-                            <p className="text-left"><img src={yes} className="yes"/>HTML</p>
-                            <p className="text-left"><img src={yes} className="yes"/>CSS</p>
-                            <p className="text-left"><img src={yes} className="yes"/>JavaScript</p>
-                            <div className="clearfix dashDiv">
-                                <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
-                                <div className="text-center dash"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className="card border-0">
-                        <img src={lab6} alt="..." className="card-img mx-auto"/>
-                        <div className="caption">
-                            <h4 className="text-center mx-auto">BUSINESS CONSULTING</h4>
-                            <p className="text-left"><img src={yes} className="yes"/>Android Apps</p>
-                            <p className="text-left"><img src={yes} className="yes"/>IOS Apps</p>
-                            <p className="text-left"><img src={yes} className="yes"/>Web Apps</p>
-                            <div className="clearfix dashDiv">
-                                <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
-                                <div className="text-center dash"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+        <Lab/>
 
           <div className="play">
             <h2 className="text-center">Choose your play</h2>
@@ -305,7 +186,7 @@ class Home extends React.Component {
                       <p className="text-center">Design</p>
                     </div>
                     <div className="mx-auto">           
-                      <img src={lab3} alt="..." className="mx-auto d-block"/>
+                      <img src={lab2} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Frontend</p>
                       <img src={lab5} alt="..." className="mx-auto d-block"/>
                       <p className="text-center">Marketing & SEO</p>
@@ -402,55 +283,10 @@ class Home extends React.Component {
             </div>
           </div>
 
-          <div className="subscribe">
-            <div className="d-md-flex justify-content-md-between">
-              <div className="col-sm-6 text-sm-left align-self-top">       
-              <p className="d-none d-sm-block">
-                Subscribe & get a hand picked list of the best development 
-                links every week
-              </p>      
-               
-              <div className="col-12 form-wrap d-none d-sm-flex justify-content-md-between align-content-center">
-                <form className="my-auto d-flex justify-content-md-between">
-                    <input type="email" placeholder="E-mail here"/>
-                    <input className="" type="submit" value="SUBSCRIBE"/>
-                </form>
-              </div> 
+          <Subscribe/>
 
-              </div>
-              <div className="col-sm-6 ">                                      
-                <img className="d-flex justify-content-end float-sm-right mx-auto align-self-start" src={openMail}/>
-              </div>
-              
-              <p className="d-block d-sm-none text-center">
-                Subscribe & get a hand picked list of the best development 
-                links every week
-              </p>
+          <Join/>
 
-              <div className="col-12 form-wrap d-flex d-sm-none justify-content-sm-between align-content-center">
-                <form className="my-auto d-sm-flex justify-content-sm-between">
-                    <input type="email" placeholder="E-mail here"/>
-                    <input className="" type="submit" value="SUBSCRIBE"/>
-                </form>
-              </div> 
-
-            </div>
-          </div>
-
-          <div className="join">
-            <div className="d-md-flex justify-content-md-between align-self-center">      
-              <img className="d-flex justify-content-end float-sm-right mx-auto mx-sm-0 align-self-center" src={goluxWhite}/>
-              
-              <div className="text-left align-self-top">      
-                  <p className="text-left">
-                     Join <b>Golux Club</b><br/>
-                     and get special offers<br/>
-                     from our team
-                  </p>       
-                  <input type="button" value="JOIN"/>
-              </div>
-            </div>
-          </div>
         
       </div>
     )
