@@ -1,7 +1,17 @@
+.topDiv {
+    position: relative;
+    z-index: 0;
+    background:#f1f1f1;
+    height:7.5vw;
+    -webkit-box-shadow: 0 0.3vw 0.3vw rgb(199, 199, 199) !important;
+}
+
 .logoDiv {
-    padding-top:10%;
-    padding-left:20%;
-    padding-right:20%;
+    padding-top:5vw;
+    padding-left:19%;
+    padding-right:19%;
+    padding-bottom:5vw;
+    background:rgb(245, 245, 245);
 }
 
 .multiLogo {
@@ -10,15 +20,15 @@
 
 .logo {
     margin-top:4vw;
-    width:15vw;
+    width:16vw;
 }
 
 .logoDiv .descr {
-    width:31vw;
-    font-size: 0.9vw;
-    background: lightgray;
-    line-height: 2.5vw;
-    border-radius: 0.4vw;
+    width:35vw;
+    font-size: 1vw;
+    background: #f0f0f0;
+    line-height: 2.7vw;
+    border-radius: 1vw;
     padding:1vw;
 }
 
@@ -26,14 +36,26 @@
     padding:1vw;
 }
 
+.logoDiv .descr b {
+    font-weight: 700;
+}
+
 .logoDiv button {
+    height:4vw;   
     width:100%;
-    margin-top:2vw;
-    color:red;
+    margin-top:1.5vw;
+    font-size: 1.3vw;
+    font-weight: 900;
+    color:#d21653;
     border:none;
     border-radius: 0.4vw;
     background: white;
     line-height: 2.5vw;
+}
+
+.logoDiv .descr img {
+    width:1.8vw;
+    margin-right:1.5vw;
 }
 
 
@@ -50,23 +72,39 @@
     width:30vw;
 }
 
+.values>div p {
+    opacity: 0.7;
+    margin-top: 1.1vw;
+    font-size: 1.3vw;
+    font-weight: 900;
+}
+
+
 
 
 
 
 .niche {
-    padding-top:10%;
+    padding-top:4vw;
     padding-left:10%;
+    padding-right:10%;
+    background:lightblue;
 }
 
-
 .niche img {
-    width:40vw;
+    width:32vw;
+    margin-bottom: 2vw;
+}
+
+.niche h3 {
+    color:white;
+    font-size: 2.2vw;
+    margin-bottom: 4vw;
 }
 
 .niche .descr {
-    width:31vw;
-    font-size: 0.9vw;
+    width:29vw;
+    font-size: 1.2vw;
     line-height: 2.5vw;
     border-radius: 0.4vw;
     padding:1vw;
@@ -128,17 +166,31 @@
 
 
 .partners {
-    background: lightgray;
-    padding-left:25vw;
-    padding-right:25vw;
-    padding-top:5vw;
-    padding-bottom:5vw;
-    flex-wrap:wrap;
+    /* padding-top:5vw;
+    padding-bottom:5vw; */
 }
 
 .partners img {
     width:15vw !important;
     left:0;
     width:2vw;
+    /* margin-left:2vw !important; 
+    margin-right:2vw !important; 
+    margin-top:1vw !important;  */
+    border: 1px solid black;
+    
+}
 
+.hex2line1 {
+    transform: translatex(60%);
+}
+
+.hex2line2 {
+    transform: translatex(-60%);
+}
+
+.centerx {
+    position: relative;
+    left:50%;
+    transform:translatex(-50%);
 }

@@ -9,6 +9,7 @@
 }
 
 .logoLink {
+    -webkit-transform: translatey(0.2vw);
     width:12%;
 }
 
@@ -37,9 +38,13 @@
 }
 
 .navRight img {
-    width:8%;
+    width:7.5%;
     margin-left: 12%;
     cursor:pointer;
+}
+
+.hamburger {
+    width:9% !important;
 }
 
 .navRight img:hover {
