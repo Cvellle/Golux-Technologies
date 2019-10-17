@@ -12,7 +12,7 @@ class Join extends React.Component {
       <div>
 
           <div className="join">
-            <div className="d-md-flex justify-content-md-between align-self-center">      
+            <div className="d-sm-flex justify-content-sm-between align-self-center">      
               <img className="d-flex justify-content-end float-sm-right mx-auto mx-sm-0 align-self-center" src={goluxWhite}/>
               <div className="text-left align-self-top">      
                   <p className="text-left">

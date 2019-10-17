@@ -1,0 +1,359 @@
+.contactus {
+    background: #f6f7f9;
+    width:100%;
+    padding-top:2.5%;
+    padding-left:19%;
+    padding-right:19%;
+    padding-bottom:8%;
+}
+
+.bookDiv {
+    position: relative;
+    padding-left:7%;
+    padding-right:5%;
+}
+
+.bookDiv p {
+    margin-top:2%;
+    font-size: 2.5vw;
+    font-weight: 900;
+}
+
+.bookDiv button {
+    position: absolute;
+    right:5.5%;
+    font-size:1.4vw;
+    font-weight: 900;
+    color:white;
+    background: #d41654;
+    border:none;
+    border-radius: 0.3rem;
+    margin-top:1.5%;
+    padding-top:1.5%;
+    padding-bottom:1.5%;
+    margin-bottom:6%;
+    width:28%;
+}
+
+.bookDiv button img {
+    height:1.2vw;
+    width:30%;
+}
+
+.bookDiv + p {
+    margin-top:4.5%;
+    font-size: 1.4vw;
+    font-weight: 900;
+}
+
+.inputs {
+    margin-top:5%;
+    width:74%; 
+    padding-bottom: 0%;
+    border-bottom: 1px solid lightgray;
+}
+
+.info input {
+    font-size: 1vw;
+    margin-bottom:2.23vw;
+    height: 3.5vw;
+    width:170%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background:transparent;
+}
+
+input[type="checkbox"] {
+    transform: scale(2.5);
+    margin-left:3%;
+    border-radius: 2vw !important;
+}
+
+input[type="checkbox"] + p {
+    height: initial !important;
+    width:initial !important;
+    margin-top:5% !important;
+    margin-left:10%;
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+.checkboxDiv {
+    margin-top:3% !important;
+}
+
+.checkboxDiv div {
+    margin-left:2%;
+    height:1.8vw;
+    width:1.8vw;
+    border:2px solid rgba(128, 128, 128, 0.651);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.checkboxDiv img {
+    transform: translate(25%,-25%) scale(1.2);
+}
+
+.checkboxDiv input {
+    visibility: hidden;
+    margin-right: -5%;
+}
+
+.checkboxDiv span {
+    font-size: 1.1vw !important;
+    margin-left: -5%;
+}
+
+.textareaDiv {
+    position: relative;
+    font-size: 1vw;
+    height:15vw !important;
+    width:48% !important;
+    border: none;
+    border-bottom: 1px solid lightgray;  
+    background:transparent;
+}
+
+.triangle {
+    position:absolute;
+	bottom:1vw;
+	right:1vw;
+	border-color: transparent rgba(128, 128, 128, 0.555) rgba(128, 128, 128, 0.555)  transparent;
+	border-style: solid;
+	border-width: 0.5vw;
+    z-index: 0;
+}
+
+textarea {
+    padding:1vw;
+    position: absolute;
+    border: none;
+    resize: none;
+    height:100% !important;
+    width:100% !important;
+    background:transparent;
+}
+
+textarea:focus {
+    outline:0 !important;
+}
+
+input:focus, .textareaDiv:focus {
+    outline:none;
+}
+
+.workAndServ {
+    margin-top:13%;
+}
+
+.workAndServ h3 {
+    font-size: 1.5vw;
+    font-weight: 900;
+    color:rgba(128, 128, 128, 0.781);
+    margin-bottom:1vw;
+}
+
+.workAndServ img {
+    width:10vw;
+}
+
+.work img {
+    width:9.4vw;
+}
+
+.submit {
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    margin-top:3%;
+    height:4vw;
+    width:85%;
+    color:white;
+    background:#d41654;
+    border:none;
+    border-radius: 0.5rem;
+}
+
+
+
+@media only screen and (max-width:575px) {
+
+    .contactus {
+        padding-top:10vw;
+        padding-left:0vw !important;
+        padding-right:0vw;
+    }
+
+    .contactus>div {
+        padding: 0 !important;
+    }
+
+    .contactus p {
+        font-size:8vw !important;
+    }
+
+    .contactus button {
+        margin-top:12vw !important;     
+        font-size:7.5vw !important;
+        height:20vw !important;
+        width:90% !important;      
+    }
+
+    .bookDiv button {
+        position: relative !important;
+        right: 0% !important;
+    }
+
+    .bookDiv button img {
+        height:auto !important;
+        width:10vw !important;
+        margin-left:0vw !important;  
+        margin-right:9vw !important;      
+    }
+
+    .bookDiv + p {
+        margin-top:8vw !important;     
+        font-size:6vw !important;
+        line-height: 10vw;
+        width:80vw !important;
+    }
+
+    .contactus form {
+        margin-top:15vw !important;    
+        font-size:8vw !important;
+        height:20vw !important;
+        width:100% !important;
+    }
+
+    .inputs {
+        margin:0 !important;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-bottom:5vw !important; 
+        width:100vw;
+        background-image: url("../../images/mobileHand.png");
+        background-size:150% 100%;
+        background-position:80% 20%;
+        background-repeat:no-repeat;
+        border-bottom:none;
+    }
+
+    .info input {
+        height:20vw !important;
+        width:90vw !important;
+        font-size: 6vw;
+        margin-bottom:17vw !important;     
+    }
+
+    .info input:focus {
+        outline:none;     
+    }
+
+    .textareaDiv {
+        height:90vw !important; 
+        width:90vw !important; 
+        font-size: 6vw;
+    }
+    .triangle {
+        bottom:4vw;
+        right:4vw;
+        border-width: 3vw;
+    }
+
+    .checkboxDiv {
+        border-bottom:1px solid lightgray !important;
+    }
+
+    .checkboxDiv>div {
+        height: 9vw;
+        width: 9vw;
+    }
+
+    .checkboxDiv img {
+        transform: translate(2vw,-4vw) scale(1.3);
+    }
+
+    .checkboxDiv span {
+        width:90vw !important; 
+    }
+
+    .workAndServ {
+        padding-top:10vw;
+        padding-left:0vw !important;
+        padding-right:0vw;
+    }
+
+    .workAndServ h3 {
+        font-size: 7vw !important;
+        margin-bottom: 10vw !important;
+    }
+
+    .workAndServ img {
+        width: 30vw !important;
+        margin:10vw;
+    }
+
+    .work img { 
+        margin:10vw;
+    }
+
+    .workAndServ p {
+        margin-top:-10vw !important;
+        font-size: 5.5vw !important;
+        width:25vw;
+    }
+
+    .work {
+        width:90vw !important; 
+    }
+    
+    .services h3 {
+        margin-top:12vw !important;
+        margin-bottom:-5vw !important;
+    }
+
+    .services img {
+        width:27vw !important;
+    }
+
+    .services p {
+        font-size: 4.5vw !important;
+    }
+
+    .services>div {
+        width:100vw;
+    }
+    
+    .workAndServ h3 {
+        font-size: 2vw;
+    }
+
+    form input {
+        width:100% !important;
+    }
+
+    .checkboxDiv {
+        margin-top:20vw !important;
+        margin-left: 4vw !important;
+    }
+
+    input[type="checkbox"] {
+        width:1vw !important;
+        margin-right: 5vw;
+    }
+
+    input[type="checkbox"] + p {
+        font-size: 5vw !important;
+        width:60vw !important;
+        margin-left: 20vw !important;
+    }
+
+    .submit {
+        margin-top:5vw !important;
+        height:25vw;
+        border-radius: 0;
+        font-size: 4.5vw !important;
+    }
+
+}

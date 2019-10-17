@@ -81,6 +81,10 @@
         margin-left: 6vw;
         cursor:pointer;
     }
+
+    .hamburger {
+        width:9vw !important;
+    }
     
 }
 

@@ -10,17 +10,16 @@ class Subscribe extends React.Component {
 
     return (
       <div>
-
         <div className="subscribe">
-            <div className="d-md-flex justify-content-md-between">
+            <div className="d-sm-flex justify-content-sm-between">
               <div className="col-sm-6 text-sm-left align-self-top">       
               <p className="d-none d-sm-block">
                 Subscribe & get a hand picked list of the best development 
                 links every week
               </p>      
                
-              <div className="col-12 form-wrap d-none d-sm-flex justify-content-md-between align-content-center">
-                <form className="my-auto d-flex justify-content-md-between">
+              <div className="col-12 form-wrap d-none d-sm-flex justify-content-sm-between align-content-center">
+                <form className="my-auto d-flex justify-content-sm-between">
                     <input type="email" placeholder="E-mail here"/>
                     <input className="" type="submit" value="SUBSCRIBE"/>
                 </form>
@@ -42,10 +41,8 @@ class Subscribe extends React.Component {
                   <input className="" type="submit" value="SUBSCRIBE"/>
                 </form>
               </div> 
-
             </div>
-        </div>
-        
+        </div>  
       </div>
     )
   }

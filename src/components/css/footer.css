@@ -26,9 +26,10 @@
 }
 
 .footerContent img {
-    width:5%;
+    width:8%;
     margin-left: 2%;
     margin-right: 2%;
+    margin-bottom: 0.5vw;
 }
 
 .footerButtons p {
@@ -52,18 +53,19 @@
 .footerContent button {
     color:#134173;
     font-weight: 900;
-    height:3rem;
+    height:3.15vw;
+    font-size: 1vw;
     border:none;
     border-radius: 0.5rem;
     background: white !important; 
-    margin-bottom:6.5%;
+    margin-bottom:1vw;
 }
 
 .footerContent input {
     color:#134173;
     border:none;
     border-radius: 0.5rem;
-    margin-bottom:6.5%;    
+    margin-bottom:1vw;    
 }
 
 .footerContent .half {
@@ -71,11 +73,14 @@
 }
 
 .subscrFooter {
-    padding:5%;
+    padding-left:5%;    
+    position: absolute;
+    bottom:0vw;
 }
 
 .subscrFooter input {
     width:53%;
+    font-size: 1vw;
 }
 
 .subscrFooter button {
@@ -96,11 +101,11 @@
 }
 
 .blueContact1 {
-    margin-top: 22%;
+    margin-top: 5vw;
 }
 
 .blueContact2 {
-    margin-bottom: 15%;
+    margin-bottom: 4vw !important;
 }
 
 .blueContact1, .blueContact2 {
@@ -114,6 +119,7 @@
 
 .footer p {
     color:rgba(128, 128, 128, 0.801);
+    margin-bottom:1vw;
 }
 
 .footerButtons {
@@ -141,6 +147,7 @@
 
 .footer p {
     font-size: 0.85vw !important;
+    
 }
 
 .underFooter, .underFooter span {
@@ -150,6 +157,21 @@
 .footerContent input {
     padding-left:5%;
 }
+
+.footerDescr {
+    line-height: 1.2vw;
+    margin-bottom:0 !important;
+}
+
+.footerButtons p {
+    line-height: 2vw;
+ }
+
+ .subscrFooter input, .subscrFooter button {
+    padding-left:5%;
+    margin-bottom:0vw !important;
+}
+
 
 
 
@@ -183,11 +205,9 @@
         padding-left:0vw !important;
     }
 
-
     .footerDescr {
         line-height: 9.5vw;
     }
-
 
     .footerLinks1 {
         margin-top: 15vw;
@@ -198,7 +218,7 @@
         display: block;
         margin-left:auto;
         margin-right:auto !important;
-        color:blue;
+        color:#134173;
         width:30vw;
         transform: translate(0) !important;
         border-bottom: 1vw solid gray;
@@ -207,20 +227,20 @@
     .footerLinks2 {
         margin-top: 10vw;
         line-height: 14vw;
-        color:blue;
+        color:#134173;;
         transform: translate(0) !important;
     }
     
     .blueContact1 {
-        margin-top: 9vw;
+        margin-top: 9vw !important;
     }
     
     .blueContact2 {
-        margin-bottom: 9vw;
+        margin-bottom: 9vw !important;
     }
     
     .blueContact1, .blueContact2 {
-        color:blue
+        color:#134173;
     }
     
     .footerButtons {
@@ -234,8 +254,8 @@
         margin-bottom:1vw;
         margin-left:3vw;
         margin-right:8vw;
-    }
-    
+    }  
+
     .mob {
         width:5vw !important;
         margin-right: 8vw !important;

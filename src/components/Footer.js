@@ -10,7 +10,7 @@ import insta from '../images/insta.svg';
 const Footer = () => {
   return (
     <footer className="footer">
-        <div class="d-sm-flex justify-content-md-between">
+        <div class="d-sm-flex justify-content-sm-between">
             <div className="">
                 <img src={logo} className="logo"/>
             </div>
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
         </div>
         
-        <div class="footerContent d-md-flex justify-content-md-between mx-auto">
+        <div class="footerContent d-sm-flex justify-content-sm-between mx-auto">
 
             <div className="col-sm-3 mx-auto justify-content-center firstColumn">
                 <p className="text-left mx-auto footerDescr">
@@ -28,7 +28,7 @@ const Footer = () => {
                 </p>
                 <p className="text-left mx-auto blueContact1">office@glux.com</p>
                 <p className="text-left mx-auto blueContact2">+381 64 397 4918</p>
-                <p className="text-left mx-auto">BELGRADE SERBIA</p>
+                <p className="text-left mx-auto adress">BELGRADE SERBIA</p>
                 <p className="text-left mx-auto">Bulevar Mihaila Pupina 422/5</p>
             </div>
 
