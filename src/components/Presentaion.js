@@ -4,14 +4,17 @@ import Subscribe from './Subscribe'
 import Join from './Join'
 import multiLogo from '../images/multiLogo.png';
 import download from '../images/download.png';
+import downloadRed from '../images/downloadRed.png';
 import goluxLett from '../images/goluxLett.png';
 import building from '../images/building.png';
 import diamond from '../images/diamond.png';
 import desk from '../images/desk.png';
 import stairs from '../images/stairs.png';
 import hexLogo from '../images/grayHex.png';
+import reactAng from '../images/reactAng.png';
+import share from '../images/share.png';
+import hand from '../images/hand.png';
 import profileBlue from '../images/profileBlue.svg';
-import hamb from '../images/hamb.svg';
 import './css/presentation.css'
 
 class Presentaion extends React.Component {
@@ -52,7 +55,7 @@ class Presentaion extends React.Component {
 
         <div className="niche d-sm-flex justify-content-between">
           <div className="d-block d-sm-inline-block">
-            <img src={profileBlue} className="multiLogo d-block mx-auto"/>
+            <img src={profileBlue} className="hexTransparent d-block mx-auto"/>
           </div>
           <div>
             
@@ -76,24 +79,27 @@ class Presentaion extends React.Component {
         </div>
 
         <div className="loyality mx-auto">
-          <h2 className="text-center">Loyality</h2>
+          <h2 className="text-center">Loyality programs</h2>
           <p className="text-center">
-            We're constantly stayingon theedgeof the new technology
+            We're constantly stayingon the edge of the new technology, taking the best
+            changing, adapting to what fits us the best. We never stop at just "good enough",
+            but always strive for great - and then some more. Our loyal clients caught
+            a glimpse for that.
           </p>
-          <ImageBlock url={hexLogo} name={"COMPANY"}/>
-          <ImageBlock url={hexLogo} name={"VALUE"}/>
-          <ImageBlock url={hexLogo} name={"TEAM"}/>
+          <ImageBlock url={hexLogo} name={"LOYALITY PROGRAM"}/>
+          <ImageBlock url={hexLogo} name={"LOYALITY PROGRAM"}/>
+          <ImageBlock url={hexLogo} name={"LOYALITY PROGRAM"}/>
         </div>
 
         <div className="reactAngular mx-auto">
           <div className="reactAngularL d-sm-inline-block mx-auto">
-            <img src={multiLogo} className="d-block mx-auto"/>
+            <img src={reactAng} className="d-block mx-auto"/>
             <div className="share d-block mx-auto">
               <h4 className="text-left">React vs. Angular. Battle for the Front-end</h4>
               <p className="text-left">Yuri Markov</p>
               <p className="text-left">19 June. 2019</p>
               <p className="text-left">7 min read</p>
-              <img src={multiLogo} className="float-sm-right d-sm-inline-block"/>
+              <img src={share} className="float-sm-right d-sm-inline-block"/>
             </div>
           </div>
           <div className="reactAngularR d-sm-inline-block mx-auto float-sm-right">
@@ -119,40 +125,43 @@ class Presentaion extends React.Component {
 
         <div className="download mx-auto">
           <div className="d-sm-inline-block mx-auto">
-            <button>
-              <img src={profileBlue} className="d-sm-inline-block"/>
+            <button className="leftButton">
+              <img src={hand} className="d-sm-inline-block"/>
               CLIENTS
             </button>
           </div>
           <div className="d-sm-inline-block float-sm-right ">
-            <button>
-              <img src={profileBlue} className="d-sm-inline-block"/>
+            <button className="rightButton">
+              <img src={downloadRed} className="d-sm-inline-block"/>
               <span>DOWNLOAD PRESENTATION</span>
             </button>
           </div>
         </div>
         
         <div className="partners">
+          <h3 className="text-center d-none d-sm-block">
+            Golux partners
+          </h3>
           <div className="d-flex justify-content-center">
             <div className="mx-auto">
-              <div className="d-sm-inline-block mx-auto">
-                <img src={hexLogo} className="d-block mx-auto"/>
+              <div className="hexDiv d-inline-flex mx-auto">
+                <span>LOGO</span>
               </div>
-              <div className="d-sm-inline-block mx-auto">
-                <img src={hexLogo} className="d-block mx-auto"/>
+              <div className="hexDiv d-inline-flex mx-auto">
+                <span>LOGO</span>
               </div>
-              <div className="d-sm-inline-block mx-auto">
-                <img src={hexLogo} className="d-block mx-auto"/>
+              <div className="hexDiv d-inline-flex mx-auto">
+                <span>LOGO</span>
               </div>
             </div>
           </div>
           <div className="d-flex justify-content-center hex2line2">
             <div className="mx-auto">
-              <div className="d-sm-block float-right">
-                <img src={hexLogo} className="d-block mx-auto"/>
+              <div className="hexDiv d-inline-flex float-right">
+                <span>LOGO</span>
               </div>
-              <div className="d-sm-inline-block float-left">
-                <img src={hexLogo} className="d-block mx-auto"/>
+              <div className="hexDiv d-inline-flex float-left">
+                <span>LOGO</span>
               </div>
             </div>
           </div>

@@ -83,6 +83,7 @@ input[type="checkbox"] + p {
 }
 
 .checkboxDiv div {
+    position: relative;
     margin-left:2%;
     height:1.8vw;
     width:1.8vw;
@@ -92,7 +93,8 @@ input[type="checkbox"] + p {
 }
 
 .checkboxDiv img {
-    transform: translate(25%,-25%) scale(1.2);
+    position: absolute;
+    transform: translate(0.3vw,-0.1vw) scale(1.2);
 }
 
 .checkboxDiv input {
@@ -347,6 +349,10 @@ input:focus, .textareaDiv:focus {
         font-size: 5vw !important;
         width:60vw !important;
         margin-left: 20vw !important;
+    }
+
+    .checkboxDiv img {
+        transform:translate(1.5vw,-0.5vw);
     }
 
     .submit {

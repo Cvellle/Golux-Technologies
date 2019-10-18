@@ -1,6 +1,5 @@
 
 body {
-    /* background-image: url("../../images/homepageMob.jpg"); */
     margin:0;
     background-size:100%;
     position: relative;
@@ -121,7 +120,7 @@ h2 {
 }
 
 .labDescr + div .dash  {
-    width:5.5vw;
+    width:5.5vw !important;
     position: relative;
     z-index: 0;
     background:#00ffa3;
@@ -608,9 +607,19 @@ h2 {
         background:#00ffa3;
         transform: translate(-22vw,-5vw);
         height: 5vw !important;
-        width: 38vw;
+        width: 40vw !important;
     }
     
+    .lab .dashDiv a  {
+        position: relative;
+        z-index: 1;
+        font-weight:900;
+        font-size: 1.2vw;
+        width:60vw !important;
+        margin-left: 20.5vw;
+    }
+    
+
     .learn {
         position: relative;
         z-index: 3 !important;
@@ -622,7 +631,7 @@ h2 {
     }
 
     .labDescr + div .dash  {
-        width:30vw;
+        width:30vw !important;
         position: relative;
         z-index: 0;
         background:#00ffa3;

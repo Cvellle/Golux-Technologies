@@ -197,7 +197,8 @@
         margin-bottom:3%;
         width:76vw;
         padding-bottom: 0%;
-        border-bottom: 1px solid gray;    
+        border-bottom: 1px solid gray; 
+        padding-bottom:15vw !important;   
     }
     
     .firstColumn {
@@ -300,7 +301,8 @@
         margin-right:auto;
         height: 15vw;
         width:100%;     
-
+        font-size: 5vw;
+        padding-left:5vw !important;
     }
     
     .subscrFooter button {
@@ -316,6 +318,7 @@
         margin-right:auto !important;
         padding-left:10vw;
         padding-right:10vw;
+        margin-bottom: -15vw;
     }
 
     .underFooter i {
