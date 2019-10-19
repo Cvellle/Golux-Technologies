@@ -247,8 +247,15 @@
 }
 
 .partners {
-    padding-top:5vw;
+    padding-top:7vw;
     padding-bottom:5vw;
+}
+
+.partners h3 {
+    color:#104277 !important;
+    font-size: 2.5vw !important;
+    font-weight: 800;
+    margin-bottom:4vw;
 }
 
 .partners img {
@@ -276,19 +283,9 @@
     margin-top:1vw !important;
 }
 
-
 .hexDiv span {
     font-size: 2vw;
     opacity: 0.2;
-}
-
-.partners img {
-    width:15vw !important;
-    left:0;
-    width:2vw;
-    margin-left:2vw !important; 
-    margin-right:2vw !important; 
-    margin-top:1vw !important;
 }
 
 .hex2line1 {
@@ -576,73 +573,55 @@
         width:5.5vw;
     }
     
-    .partners {
-        padding-top:5vw;
-        padding-bottom:5vw;
-        transform: rotate(90deg);
+    .partners>div {
+        padding-top:0vw;
+        padding-bottom:0vw;
+        /* height:100vw; */
+        /* width:100vw; */
+        /* transform: rotate(-90deg); */
         margin-top:10vw !important;
     }
 
+    .partners {
+        /* padding-top:0vw;
+        padding-bottom:0vw;
+        margin-top:10vw !important; */
+    }
+    
     .partners h3 {
         color:#104277 !important;
-        font-size: 1.3vw;
-        font-weight: 800 ;
+        font-size: 2.5vw !important;
+        font-weight: 800;
+        margin-bottom:4vw;
     }
 
-    .partners img {
-        width:15vw !important;
-        left:0;
-        width:2vw;
-        margin-left:2vw !important; 
-        margin-right:2vw !important; 
-        margin-top:1vw !important;
-    }
-    
     .hexDiv {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-image: url("../../images/grayHex.png");
         background-size: cover;
-        width:15vw !important;
-        height:16vw;
-        left:0;
-        width:50vw;
-        margin-left:6vw !important; 
-        margin-right:6vw !important; 
-        margin-top:10vw !important;
-        transform: scale(1.5);
+        /* width:35vw !important; */
+        /* height:35vw; */
+        margin-left:2vw !important; 
+        margin-right:2vw !important; 
+        margin-top:4vw !important;
     }
-    
     
     .hexDiv span {
         font-size: 2vw;
         opacity: 0.2;
-        transform:rotate(-90deg);
+        transform:rotate(90deg);
     }
     
-    .partners img {
-        width:15vw !important;
-        left:0;
-        width:2vw;
-        margin-left:3vw !important; 
-        margin-right:3vw !important; 
-        margin-top:5vw !important;
+    .hexLine1 {
+        width:150vw;
     }
     
-    .hex2line1 {
-    
-    }
-    
-    .hex2line2 {
-        transform: translatey(-0.5rem);
+    .hexLine2 {
+        /* transform:translatex(20vw) !important; */
     }
     
     .centerx {
         position: relative;
         left:50%;
-        transform:translatex(-50%);
     }
     
 

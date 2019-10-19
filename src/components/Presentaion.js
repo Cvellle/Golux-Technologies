@@ -139,23 +139,26 @@ class Presentaion extends React.Component {
         </div>
         
         <div className="partners">
-          <h3 className="text-center d-none d-sm-block">
+          <h3 className="text-center">
             Golux partners
           </h3>
-          <div className="d-flex justify-content-center">
-            <div className="mx-auto">
-              <div className="hexDiv d-inline-flex mx-auto">
-                <span>LOGO</span>
-              </div>
-              <div className="hexDiv d-inline-flex mx-auto">
-                <span>LOGO</span>
-              </div>
-              <div className="hexDiv d-inline-flex mx-auto">
-                <span>LOGO</span>
+          <div>
+            <div className="hexLine1 d-inline d-sm-flex justify-content-center">
+              <div className="mx-auto">
+                <div className="hexDiv d-inline-flex mx-auto">
+                  <span>LOGO</span>
+                </div>
+                <div className="hexDiv d-inline-flex mx-auto">
+                  <span>LOGO</span>
+                </div>
+                <div className="hexDiv d-inline-flex mx-auto">
+                  <span>LOGO</span>
+                </div>
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-center hex2line2">
+          
+          <div className="hexLine2 d-inline d-sm-flex justify-content-center hex2line2">
             <div className="mx-auto">
               <div className="hexDiv d-inline-flex float-right">
                 <span>LOGO</span>
