@@ -7,24 +7,24 @@
 }
 
 .logoDiv {
-    padding-top:5vw;
-    padding-left:19%;
-    padding-right:19%;
+    padding-top:7vw;
+    padding-left:22%;
+    padding-right:18%;
     padding-bottom:5vw;
     background:rgb(245, 245, 245);
 }
 
 .multiLogo {
-    width:15vw;
-}
-
-.logo {
-    margin-top:4vw;
     width:16vw;
 }
 
+.logo {
+    top:-0.5vw !important;
+    width:15.5vw !important;
+}
+
 .logoDiv .descr {
-    width:35vw;
+    width:34vw;
     font-size: 1vw;
     background: #f0f0f0;
     line-height: 2.7vw;
@@ -53,6 +53,8 @@
     border-radius: 0.4vw;
     background: white;
     line-height: 2.5vw;
+    -webkit-box-shadow: 0vw -0.03vw 0.3vw 0.03vw rgb(180, 180, 180);
+    -moz-box-shadow: 0px -1px 10px 1px rgba(107,107,107,1);
 }
 
 .logoDiv .descr img {
@@ -61,13 +63,18 @@
 }
 
 .values {
-    padding-top:8vw;
-    padding-bottom:8vw;
-    width:60vw;
+    padding-top:7vw;
+    padding-bottom:2vw;
+    width:58vw;
 }
 
 .values>div {
-    width:30vw;
+    width:29vw;
+    margin-bottom:5vw;
+}
+
+.values img {
+    width:15vw;
 }
 
 .values>div p {
@@ -108,7 +115,7 @@
     position: relative;
     padding-left:0vw;
     padding-right:0vw;
-    padding-top:8vw;
+    padding-top:10vw;
     padding-bottom:8vw;
     width:72vw;
 }
@@ -125,13 +132,13 @@
 
 .loyality h2 + p {
     font-size: 1.2vw;
-    margin-bottom:4vw;
-    width: 50vw;
+    width: 51vw;
     line-height: 2.5vw;
     opacity: 0.75;
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom:4vw;
 }
 
 .loyality img {
@@ -140,8 +147,8 @@
 
 .loyality img + p {
     margin-top:3vw;
-    font-size: 1.4vw;
-    font-weight: 700;
+    font-size: 1.3vw;
+    font-weight: 900;
     opacity: 0.75;
     width: 7vw;
     display: flex;
@@ -150,24 +157,26 @@
 }
 
 .reactAngular {
-    width:66vw;
+    width:64vw;
     padding-top:8vw;
     padding-bottom:8vw;
 }
 
 .reactAngular h4 {
-    margin-top:2vw;
+    margin-top:1.7vw;
+    margin-left: 1vw;
     line-height: 2vw;
     color:#104277;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     font-weight: 800 ;
-    width:23.75vw;
+    width:25vw;
 }
 
 .reactAngularL h4 {
+    margin-left: 0vw;
     font-size: 1.5vw;
     font-weight: 900 ;
-    width:13.5vw;
+    width:15vw;
     color:black;
     opacity: 0.8;
 }
@@ -192,32 +201,39 @@
 
 .share {
     position: relative;
-    width:80%;
+    width:87%;
 }
 
+.share h4 {
+    line-height: 2.4vw;
+}
+
+
 .share img {
+    filter:grayscale(1) opacity(0.25);
     position: absolute;
     bottom:0;
     right:0;
     width:5vw;
 }
 
-.reactAngularR div {
-    border-bottom:1px solid lightgray;
+.reactAngularR .titleDiv {
+    border-bottom:1px solid rgba(211, 211, 211, 0.651);
     width:30vw;
 }
 
 .reactAngularR p {
     font-size: 1vw;
     opacity: 0.8;
-    margin-top:0.7vw;
-    margin-bottom:2vw;
+    margin-left: 1vw;
+    margin-top:0.2vw;
+    margin-bottom:1.7vw;
 }
 
 .download {
-    background: lightgray;
-    padding-left:17vw;
-    padding-right:16.5vw;
+    background: #f1f5f8;
+    padding-left:18vw;
+    padding-right:17.5vw;
     padding-top:5vw;
     padding-bottom:5vw;
 }
@@ -225,12 +241,12 @@
 .download button {
     position: relative;
     width:30vw;
-    height:3.5vw;
+    height:3.8vw;
     border:none;
     color:white;
     font-size: 1.3vw;
-    font-weight: 900;
-    border-radius: 0.5vw;
+    font-weight: 700;
+    border-radius: 0.3vw;
 }
 
 .download .leftButton {
@@ -243,7 +259,7 @@
 
 .download img {
     margin-right:1vw;
-    width:2vw;
+    width:2.1vw;
 }
 
 .partners {
@@ -485,6 +501,7 @@
     }
     
     .reactAngularL h4 {
+        margin-left: 0vw;
         font-size: 5vw;
         font-weight: 900 ;
         width:90%;
@@ -528,9 +545,17 @@
         width:5vw;
     }
     
-    .reactAngularR div {
+    .reactAngularR .titleDiv {
         border-bottom:1px solid lightgray;
         width:90vw;
+    }
+
+    .titleDiv > p > div {
+        line-height:5vw;
+    }
+
+    .noborder {
+        border-bottom:none !important;
     }
     
     .reactAngularR h4 {
@@ -560,8 +585,7 @@
 
     .reactAngularR .date::first-letter {
         color: #ff0000 !important;
-      }
-    
+    }
 
     .reactAngularR b {
         font-size: 5vw;
@@ -575,7 +599,6 @@
     }
     
     .download {
-        background: lightgray;
         padding-left:5vw;
         padding-right:5vw;
         padding-top:2vw;
@@ -586,12 +609,12 @@
         position: relative;
         margin-top:3vw;
         width:90vw;
-        height:12vw;
+        height:17vw;
         border:none;
         color:white;
         font-size: 5vw;
-        font-weight: 900;
-        border-radius: 0.5vw;
+        font-weight: 700;
+        border-radius: 2vw;
     }
     
     .download .leftButton {
@@ -604,7 +627,7 @@
     
     .download img {
         margin-right:3vw;
-        width:5.5vw;
+        width:7vw;
     }
     
     .partners>div {

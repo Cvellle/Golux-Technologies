@@ -15,13 +15,6 @@ import './css/home.css'
 
 class Home extends React.Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      checked:true
-    }
-  }
-
   render() {
 
     return (

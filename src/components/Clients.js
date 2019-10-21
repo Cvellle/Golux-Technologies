@@ -42,7 +42,7 @@ class Clients extends React.Component {
               </a>
             </div>
             <div className="dashDiv text-center d-block mx-auto" ref="dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
-              <a href="#" ref="learn">View all clients</a>
+              <span href="#" ref="learn">View all clients</span>
               <div className="dash"></div>
             </div>
         </div>

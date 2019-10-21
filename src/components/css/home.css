@@ -1,6 +1,6 @@
 body {
-    opacity: 0.7;
-    background-image: url("../../images/homepage.jpg");
+    /* opacity: 0.7;
+    background-image: url("../../images/homepage.jpg"); */
     margin:0;
     background-size:100%;
     position: relative;
@@ -129,14 +129,14 @@ h2 {
 }
 
 .labDescr + div .dash  {
-    width:5vw !important;
+    width:5.5vw !important;
     position: relative;
     z-index: 0;
     background:#00ffa3;
     height: 0.7vw;
     position: relative;
     left: 50%;
-    transform: translate(-30%, -130%);
+    transform: translate(-55%, -220%);
 }
 
 .lab .dashDiv p  {
@@ -156,7 +156,7 @@ h2 {
 
 .lab .dashDiv   {
     height:2vw;
-    width:8vw !important;
+    width:10vw !important;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -164,14 +164,19 @@ h2 {
 }
 
 .lab .dash  {
-    position: relative;
-    z-index: 0;
-    background:#00ffa3;
-    height: 0.8vw;
-    position: relative;
+    position: absolute;
     left: 50%;
     transform: translate(-40%, -100%);
     width:6.5vw !important;
+    transform:translatex(1.3vw);
+    position:absolute;
+    top:0.8vw;
+    left:0;
+    width:94% !important;
+    background:#00ffa3;
+    content:"";
+    height:50%;
+    z-index:-1;
 }
 
 .lab .dashDiv a:hover   {
@@ -211,7 +216,7 @@ h2 {
     height:3.5vw;
     font-size:1.4vw;
     font-weight: 900;
-    width:70%;
+    width:75%;
 }
 
 .card p {
@@ -223,6 +228,8 @@ h2 {
 .learn {
     font-size:1.1vw;
     margin-top:13%;
+    position: relative;
+    display:table;
 }
 
 .yes {
@@ -382,18 +389,18 @@ h2 {
     margin-top:6%;
     font-size: 1.25vw;
     font-weight: 900;
-    width: 12%;
+    width: 14%;
     height: 2vw;
     cursor: pointer;
 }
 
-.clients .dashDiv a {
+.clients .dashDiv span {
     position: relative;
     z-index:1;
     cursor: pointer !important;
 }
 
-.clients .dashDiv a:hover {
+.clients .dashDiv span:hover {
     text-decoration: none;
     color:black;
 }
@@ -415,7 +422,6 @@ h2 {
     padding-top:4%;
     padding-bottom:5%;
     background: url("../../images/blueLap.png");
-    /* background: linear-gradient(to right, rgb(12, 12, 146), rgb(2, 159, 250)); */
 }
 
 .whyus h3 {

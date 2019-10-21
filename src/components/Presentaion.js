@@ -13,11 +13,32 @@ import stairs from '../images/stairs.png';
 import hexLogo from '../images/grayHex.png';
 import reactAng from '../images/reactAng.png';
 import share from '../images/share.png';
+import blueshare from '../images/blueshare.png';
 import hand from '../images/hand.png';
 import profileBlue from '../images/profileBlue.svg';
 import './css/presentation.css'
 
 class Presentaion extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      share1:true
+    }
+  }
+
+  componentDidMount() {
+    var mq = window.matchMedia('@media all and (max-width: 575px)');
+    if(mq.matches) {
+      this.setState({ 
+        share1: true
+    })
+    } else {
+      this.setState({ 
+        share1: false
+    })
+    }
+  }
 
   render() {
 
@@ -79,16 +100,16 @@ class Presentaion extends React.Component {
         </div>
 
         <div className="loyality mx-auto">
-          <h2 className="text-center">Loyality programs</h2>
+          <h2 className="text-center">Loyalty programs</h2>
           <p className="text-center">
             We're constantly staying on the edge of the new technology, taking the best
             changing, adapting to what fits us the best. We never stop at just "good enough",
             but always strive for great - and then some more. Our loyal clients caught
             a glimpse for that.
           </p>
-          <ImageBlock url={hexLogo} name={"LOYALITY PROGRAM"}/>
-          <ImageBlock url={hexLogo} name={"LOYALITY PROGRAM"}/>
-          <ImageBlock url={hexLogo} name={"LOYALITY PROGRAM"}/>
+          <ImageBlock url={hexLogo} name={"LOYALTY PROGRAM"}/>
+          <ImageBlock url={hexLogo} name={"LOYALTY PROGRAM"}/>
+          <ImageBlock url={hexLogo} name={"LOYALTY PROGRAM"}/>
         </div>
 
         <div className="reactAngular mx-auto">
@@ -99,35 +120,47 @@ class Presentaion extends React.Component {
               <p className="text-left">Yuri Markov</p>
               <p className="text-left">19 June. 2019</p>
               <p className="text-left">7 min read</p>
-              <img src={share} className="float-sm-right d-sm-inline-block"/>
+              <img src={blueshare} className="float-sm-right d-sm-inline-block"/>
             </div>
           </div>
           <div className="reactAngularR d-sm-inline-block mx-auto float-sm-right">
-            <div className="d-block mx-auto">
+            <div className="d-block mx-auto titleDiv">
               <p className="date d-inline-flex d-sm-none text-center">
-                25 JUN
+                <div>
+                  <b>25</b><br/>
+                  JUN
+                </div>
               </p>              
               <h4 className="d-inline-flex text-sm-left">React vs. Angular. Battle for the Front-end</h4>
               <p className="text-left">Anastasiia Avranmenko</p>
             </div>
-            <div className="d-block mx-auto">
+            <div className="d-block mx-auto titleDiv">
               <p className="date d-inline-flex d-sm-none text-center">
-                25 JUN
+                <div>
+                  <b>25</b><br/>
+                  JUN
+                </div>
               </p>              
               <h4 className="d-inline-flex text-sm-left">Google Sheets Tutorial for Begineers</h4>
               <p className="text-left">Artur Hebda</p>
             </div>
-            <div className="d-block mx-auto">
+            <div className="d-block mx-auto titleDiv">
               <p className="date d-inline-flex d-sm-none text-center">
-                25 JUN
+                <div>
+                  <b>25</b><br/>
+                  JUN
+                </div>
               </p>              
               <h4 className="d-inline-flex text-sm-left">Product Development Roadmap - Your 
                 Guide Through the Producy Strategy</h4>
               <p className="text-left">Yuri Markov</p>
             </div>
-            <div className="d-block mx-auto">
+            <div className="d-block mx-auto titleDiv border-0">
               <p className="date d-inline-flex d-sm-none text-center">
-                25 JUN
+                <div>
+                  <b>25</b><br/>
+                  JUN
+                </div>
               </p>              
               <h4 className="d-inline-flex text-sm-left">React vs. Angular. Battle for the Front-end</h4>
               <p className="text-left">Anastasiia Avranmenko</p>
@@ -138,14 +171,14 @@ class Presentaion extends React.Component {
         <div className="download mx-auto">
           <div className="d-sm-inline-block float-sm-right ">
             <button className="rightButton">
-              <img src={downloadRed} className="d-sm-inline-block"/>
+              <img src={downloadRed} className="d-sm-inline-flex align-content-center"/>
               <span>DOWNLOAD PRESENTATION</span>
             </button>
           </div>
           <div className="d-sm-inline-block mx-auto">
             <button className="leftButton">
-              <img src={hand} className="d-sm-inline-block"/>
-              CLIENTS
+              <img src={hand} className="d-sm-inline-block align-content-center"/>
+              <span className="align-self-center my-auto">CLIENTS</span>
             </button>
           </div>
         </div>
