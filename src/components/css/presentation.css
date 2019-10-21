@@ -533,11 +533,45 @@
         width:90vw;
     }
     
+    .reactAngularR h4 {
+        width:70vw;
+        margin-left:10vw;
+    }
+
     .reactAngularR p {
         font-size: 4vw;
         opacity: 0.8;
         margin-top:0.7vw;
         margin-bottom:2vw;
+        margin-left:20vw;
+        width:60vw;
+    }
+
+    .reactAngularR .date {
+        font-size: 5vw;
+        opacity: 0.8;
+        line-height: 4vw;
+        margin-top:0.7vw;
+        margin-bottom:2vw;
+        margin-left:0 !important;
+        width:10vw;
+        justify-content: center;
+    }
+
+    .reactAngularR .date::first-letter {
+        color: #ff0000 !important;
+      }
+    
+
+    .reactAngularR b {
+        font-size: 5vw;
+        font-weight: 900;
+        line-height: 4vw;
+        margin-top:0.7vw;
+        margin-bottom:2vw;
+        margin-left:0 !important;
+        width:10vw;
+        justify-content: center;
     }
     
     .download {
@@ -574,35 +608,28 @@
     }
     
     .partners>div {
-        padding-top:0vw;
+        padding-left:0vw;
         padding-bottom:0vw;
-        /* height:100vw; */
-        /* width:100vw; */
-        /* transform: rotate(-90deg); */
-        margin-top:10vw !important;
+        transform: rotate(-90deg) scale(2.5);
     }
 
     .partners {
-        /* padding-top:0vw;
-        padding-bottom:0vw;
-        margin-top:10vw !important; */
+        padding-top:0vw;
+        padding-bottom:55vw;
+        margin-top:13vw !important;
     }
     
     .partners h3 {
         color:#104277 !important;
-        font-size: 2.5vw !important;
+        font-size: 7vw !important;
         font-weight: 800;
-        margin-bottom:4vw;
+        margin-bottom:65vw;
     }
 
     .hexDiv {
-        background-image: url("../../images/grayHex.png");
-        background-size: cover;
-        /* width:35vw !important; */
-        /* height:35vw; */
-        margin-left:2vw !important; 
-        margin-right:2vw !important; 
-        margin-top:4vw !important;
+        margin-left:3vw !important; 
+        margin-right:3vw !important; 
+        margin-top:0vw !important;
     }
     
     .hexDiv span {
@@ -610,19 +637,14 @@
         opacity: 0.2;
         transform:rotate(90deg);
     }
-    
-    .hexLine1 {
-        width:150vw;
+
+    .hex2line1 {
+        margin-bottom:3vw;
     }
-    
-    .hexLine2 {
-        /* transform:translatex(20vw) !important; */
+
+    .hex2line2 {
+        transform: translatey(0rem);
+        margin-top:3vw;
     }
-    
-    .centerx {
-        position: relative;
-        left:50%;
-    }
-    
 
 }

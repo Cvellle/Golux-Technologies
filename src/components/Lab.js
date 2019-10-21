@@ -14,66 +14,89 @@ import './css/home.css'
 
 class Lab extends React.Component {
 
-  render() {
+    moveLeft() {
+        this.refs.learn.style="transform: translatex(25%);"
+    }
 
-    return (
-        <div>
-            <div className="lab">
-                <img src={hexL} className="position-absolute hex1"/>
-                <img src={hexR} className="position-absolute hex2"/>
-                <h2 className="text-center">Golux lab</h2>
-                <p className="text-center labDescr mx-auto">
-                    We never build something your business doesn't need. Our developers live for the
-                    thrill, and break the boundries of digital. By engaging even one developer, you
-                    receive an entire machinery of experts to back you up. Whatever the Q, we got the A.
-                </p>
-                <div className="dashdiv text-center mx-auto mx-sm-0">
-                    <p>our tools</p>
-                    <div className="text-center dash"></div>
-                </div>
+    moveRight() {
+        this.refs.learn.style="transform: translatex(0%);"
+    }
 
-                <div className="container software">
-                    <h3 className="text-center">SOFTWARE DEVELOPMENT</h3>
-                    <div className="row">
-                        <Card title="BACKEND DEVELOPMENT" url={lab1}/>
-                        <Card title="FRONTEND DEVELOPMENT" url={lab2}/>
-                        <Card title="MOBILE DEVELOPMENT" url={lab3}/>
+    render() {
+
+        return (
+            <div>
+                <div className="lab">
+                    <img src={hexL} className="position-absolute hex1"/>
+                    <img src={hexR} className="position-absolute hex2"/>
+                    <h2 className="text-center">Golux lab</h2>
+                    <p className="text-center labDescr mx-auto">
+                        We never build something your business doesn't need. Our developers live for the
+                        thrill, and break the boundries of digital. By engaging even one developer, you
+                        receive an entire machinery of experts to back you up. Whatever the Q, we got the A.
+                    </p>
+                    <div className="dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
+                        <div className="price pull-left"></div>
+                        <a href="#" ref="learn" className="learn d-flex justify-content-center" role="button">our tools</a>
+                        <div ref="dash" className="text-center dash"></div>
                     </div>
-                </div>
 
-                <div className="container design">
-                    <h3 className="text-center">DESIGN | MARKETING | CONSULTING</h3>
-                    <div className="row">
-                        <Card title="DESIGN" url={lab4}/>
-                        <Card title="MARKETING & SEO" url={lab5}/>
-                        <Card title="BUSINESS CONSULTING" url={lab6}/>
+                    <div className="container software">
+                        <h3 className="text-center">SOFTWARE DEVELOPMENT</h3>
+                        <div className="row">
+                            <Card title="BACKEND WEB DEVELOPMENT" url={lab1} des1="Custtom functionalities" des2="Databases" des3="Administration" left="left"/>
+                            <Card title="FRONTEND WEB DEVELOPMENT" url={lab2} des1="HTML" des2="CSS" des3="JavaScript"/>
+                            <Card title="MOBILE DEVELOPMENT" url={lab3} des1="Android Apps" des2="iOS Apps" des3="Web"/>
+                        </div>
+                    </div>
+
+                    <div className="container design">
+                        <h3 className="text-center">DESIGN | MARKETING | CONSULTING</h3>
+                        <div className="row">
+                            <Card title="DESIGN" url={lab4} des1="Branding" des2="UX/UI Design" des3="Custom Design"/>
+                            <Card title="MARKETING & SEO" url={lab5}  left="left" des1="Sales Strategy" des2="We Analytics" des3="Keyword campaigns"/>
+                            <Card title="BUSINESS CONSULTING" url={lab6} des1="Business Dev" des2="Goal-Attaining" des3="Problem solving"/>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-      )
-   }
+        )
+    }
 }
 
-const Card = props => { 
-    return (
-        <div className="col-12 col-sm-4 backend">
+class Card extends React.Component {
+
+    moveLeft() {
+        this.refs.learn.style="transform: translatex(20%);"
+    }
+
+    moveRight() {
+        this.refs.learn.style="transform: translatex(0%);"
+    }
+
+
+    render() {
+  
+      return (
+        <div className={`col-12 col-sm-4 ${this.props.left}`}>
             <div className="card border-0">
-                <img src={props.url} alt="..." className="card-img mx-auto"/>
+                <img src={this.props.url} alt="..." className="card-img mx-auto"/>
                 <div className="caption">
-                    <h4 className="text-center mx-auto">{props.title}</h4>
-                    <p className="text-left"><img src={yes} className="yes"/>Custom functionalities</p>
-                    <p className="text-left"><img src={yes} className="yes"/>Databases</p>
-                    <p className="text-left"><img src={yes} className="yes"/>Administration</p>
-                    <div className="clearfix dashDiv">
+                    <h4 className="text-center mx-auto">{this.props.title}</h4>
+                    <p className="text-left"><img src={yes} className="yes"/>{this.props.des1}</p>
+                    <p className="text-left"><img src={yes} className="yes"/>{this.props.des2}</p>
+                    <p className="text-left"><img src={yes} className="yes"/>{this.props.des3}</p>
+                    <div className="clearfix dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
                         <div className="price pull-left"></div>
-                        <a href="#" className="learn d-flex justify-content-center" role="button">Learn more</a>
+                        <a href="#" ref="learn" className="learn d-flex justify-content-center" role="button">Learn more</a>
                         <div className="text-center dash"></div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+        )
+    }
+
 }
 
 export default Lab

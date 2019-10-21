@@ -1,20 +1,22 @@
 .footer {
     padding-top:5%;
     padding-left:19%;
-    padding-right:18%;
+    padding-right:18.7%;
     background: #f4f8f9;
 }
 
 .logo {
-    width:23%;
+    width:18% !important;
     position: relative;
-    transform: translate(0,-50%);
+    bottom:50%;
+    transform: translate(0,50%);
 }
 
 .arrowup {
-    width:40%;
+    width:42%;
     cursor: pointer;
     position: relative;
+    top:50%;
     transform: translate(0,-50%);
 }
 
@@ -38,7 +40,7 @@
 
 
 .mob {
-    width:3.5% !important;
+    width:4% !important;
     margin-right: 4.5% !important;
 }
 
@@ -52,13 +54,15 @@
 
 .footerContent button {
     color:#134173;
-    font-weight: 900;
+    font-weight: 900 !important;
+    font-family: avenir !important;
     height:3.15vw;
     font-size: 1vw;
     border:none;
     border-radius: 0.5rem;
     background: white !important; 
     margin-bottom:1vw;
+    justify-content: center;
 }
 
 .footerContent input {
@@ -168,7 +172,6 @@
  }
 
  .subscrFooter input, .subscrFooter button {
-    padding-left:5%;
     margin-bottom:0vw !important;
 }
 

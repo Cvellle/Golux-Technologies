@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import play1 from '../images/play1.png';
-import play2 from '../images/play2.png';
+import work1 from '../images/work1.png';
+import work2 from '../images/work2.png';
 import lab1 from '../images/backend.png';
 import lab2 from '../images/frontend.png';
 import lab3 from '../images/mobile.png';
@@ -67,7 +67,7 @@ class Contactus extends React.Component {
                                 <div className="d-inline-block align-self-center float-left">
                                     {this.state.checked ?  <img src={yes}  ref="check"/> : null}
                                 </div>
-                                <input className="d-inline-block align-self-center float-left" type="checkbox"/>
+                                <input ref="check" checked={this.state.checked ? true : false} className="d-inline-block align-self-center float-left" type="checkbox"/>
                                 <p>I would like to receive the Golux club Newsletter</p>
                             </div>
                         </div>
@@ -85,23 +85,23 @@ const WorkAndServ = props => {
     return (
         <div class="workAndServ d-sm-flex justify-content-sm-between">
             <h3 className="text-center d-sm-none">WORK METHOD</h3>  
-            <div className="work d-flex d-sm-block d-block mx-auto"> 
+            <div className="work d-flex d-sm-block d-block mx-auto mx-sm-0"> 
                 <h3 className="text-center d-none d-sm-block">WORK METHOD</h3>  
                 <div className="mx-auto d-inline d-sm-block">
-                    <img src={play1} alt="..." className="d-block mx-auto"/>
+                    <img src={work1} alt="..." className="d-block mx-auto"/>
                     <p className="d-block mx-auto text-center">Dedicated team</p>
                 </div>          
                 <div className="mx-auto d-inline d-sm-block">
-                    <img src={play2} alt="..." className="d-block mx-auto"/>
-                    <p className="d-block mx-auto text-center">Dedicated team</p>
+                    <img src={work2} alt="..." className="d-block mx-auto"/>
+                    <p className="d-block mx-auto text-center">Project team</p>
                 </div>  
             </div>
             <div className="d-flex justify-content-between services">
                 <div className="flex-wrapper d-flex ml-auto mr-auto">
                     <h3 className="text-center col-12">SERVICES</h3> 
-                    <WSColumn url1={lab1} url2={lab3} name="Backend"/>
-                    <WSColumn url1={lab2} url2={lab5} name="Frontend"/>
-                    <WSColumn url1={lab4} url2={lab6} name="Mobile Dev"/>
+                    <WSColumn url1={lab1} url2={lab3} name1="Backend" name2="Design"/>
+                    <WSColumn url1={lab2} url2={lab5} name1="Frontend" name2="Marketing & SEO"/>
+                    <WSColumn url1={lab4} url2={lab6} name1="Mobile Dev" name2="Business dev"/>
                 </div>
             </div>
         </div>
@@ -112,9 +112,9 @@ const WSColumn = props => {
     return (
         <div className="mx-auto">           
             <img src={props.url1} alt="..." className="mx-auto d-block"/>
-            <p className="text-center">{props.name}</p>
+            <p className="text-center">{props.name1}</p>
             <img src={props.url2} alt="..." className="mx-auto d-block"/>
-            <p className="text-center">{props.name}</p>
+            <p className="text-center">{props.name2}</p>
         </div>
     )
 }

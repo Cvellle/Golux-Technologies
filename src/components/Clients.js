@@ -7,6 +7,15 @@ import './css/home.css'
 
 class Clients extends React.Component {
 
+  moveLeft() {
+    this.refs.learn.style="margin-left:3vw"
+  
+  }
+  
+  moveRight() {
+      this.refs.learn.style="transform: translatex(0%);"
+  }
+
   render() {
       
     return (
@@ -32,8 +41,8 @@ class Clients extends React.Component {
                 <span className="sr-only">Next</span>
               </a>
             </div>
-            <div className="dashDiv text-center d-block mx-auto">
-              <a href="#">View all clients</a>
+            <div className="dashDiv text-center d-block mx-auto" ref="dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
+              <a href="#" ref="learn">View all clients</a>
               <div className="dash"></div>
             </div>
         </div>

@@ -10,15 +10,6 @@ import Clients from './Clients'
 import Subscribe from './Subscribe'
 import Join from './Join'
 import mainImg from '../images/mainImg.png';
-import lab1 from '../images/backend.png';
-import lab2 from '../images/frontend.png';
-import lab3 from '../images/mobile.png';
-import lab4 from '../images/design.png';
-import lab5 from '../images/marketing.png';
-import lab6 from '../images/business.png';
-import yes from '../images/yes.svg';
-import logo from '../images/logo.png';
-import whiteUp from '../images/whiteUp.svg';
 import './css/App.css'
 import './css/home.css'
 

@@ -146,7 +146,16 @@ input:focus, .textareaDiv:focus {
 }
 
 .workAndServ {
+    width:59vw;
     margin-top:13%;
+}
+
+.work {
+    margin-left:2vw !important;
+}
+
+.services img, .services img + p {
+    margin-left:3vw !important;
 }
 
 .workAndServ h3 {
@@ -157,11 +166,11 @@ input:focus, .textareaDiv:focus {
 }
 
 .workAndServ img {
-    width:10vw;
+    width:7.3vw;
 }
 
 .work img {
-    width:9.4vw;
+    width:7.3vw;
 }
 
 .submit {
@@ -284,6 +293,7 @@ input:focus, .textareaDiv:focus {
         padding-top:10vw;
         padding-left:0vw !important;
         padding-right:0vw;
+        width:100vw;
     }
 
     .workAndServ h3 {
@@ -307,7 +317,8 @@ input:focus, .textareaDiv:focus {
     }
 
     .work {
-        width:90vw !important; 
+        width:90vw !important;
+        margin-left:auto !important;
     }
     
     .services h3 {

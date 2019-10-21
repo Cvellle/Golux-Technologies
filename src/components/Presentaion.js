@@ -81,7 +81,7 @@ class Presentaion extends React.Component {
         <div className="loyality mx-auto">
           <h2 className="text-center">Loyality programs</h2>
           <p className="text-center">
-            We're constantly stayingon the edge of the new technology, taking the best
+            We're constantly staying on the edge of the new technology, taking the best
             changing, adapting to what fits us the best. We never stop at just "good enough",
             but always strive for great - and then some more. Our loyal clients caught
             a glimpse for that.
@@ -104,36 +104,48 @@ class Presentaion extends React.Component {
           </div>
           <div className="reactAngularR d-sm-inline-block mx-auto float-sm-right">
             <div className="d-block mx-auto">
-              <h4 className="text-left">React vs. Angular. Battle for the Front-end</h4>
+              <p className="date d-inline-flex d-sm-none text-center">
+                25 JUN
+              </p>              
+              <h4 className="d-inline-flex text-sm-left">React vs. Angular. Battle for the Front-end</h4>
               <p className="text-left">Anastasiia Avranmenko</p>
             </div>
             <div className="d-block mx-auto">
-              <h4 className="text-left">Google Sheets Tutorial for Begineers</h4>
+              <p className="date d-inline-flex d-sm-none text-center">
+                25 JUN
+              </p>              
+              <h4 className="d-inline-flex text-sm-left">Google Sheets Tutorial for Begineers</h4>
               <p className="text-left">Artur Hebda</p>
             </div>
             <div className="d-block mx-auto">
-              <h4 className="text-left">Product Development Roadmap - Your 
+              <p className="date d-inline-flex d-sm-none text-center">
+                25 JUN
+              </p>              
+              <h4 className="d-inline-flex text-sm-left">Product Development Roadmap - Your 
                 Guide Through the Producy Strategy</h4>
               <p className="text-left">Yuri Markov</p>
             </div>
             <div className="d-block mx-auto">
-              <h4 className="text-left">React vs. Angular. Battle for the Front-end</h4>
+              <p className="date d-inline-flex d-sm-none text-center">
+                25 JUN
+              </p>              
+              <h4 className="d-inline-flex text-sm-left">React vs. Angular. Battle for the Front-end</h4>
               <p className="text-left">Anastasiia Avranmenko</p>
             </div>
           </div>
         </div>
 
         <div className="download mx-auto">
-          <div className="d-sm-inline-block mx-auto">
-            <button className="leftButton">
-              <img src={hand} className="d-sm-inline-block"/>
-              CLIENTS
-            </button>
-          </div>
           <div className="d-sm-inline-block float-sm-right ">
             <button className="rightButton">
               <img src={downloadRed} className="d-sm-inline-block"/>
               <span>DOWNLOAD PRESENTATION</span>
+            </button>
+          </div>
+          <div className="d-sm-inline-block mx-auto">
+            <button className="leftButton">
+              <img src={hand} className="d-sm-inline-block"/>
+              CLIENTS
             </button>
           </div>
         </div>
@@ -143,7 +155,7 @@ class Presentaion extends React.Component {
             Golux partners
           </h3>
           <div>
-            <div className="hexLine1 d-inline d-sm-flex justify-content-center">
+            <div className="hexLine1 d-flex d-sm-flex justify-content-center">
               <div className="mx-auto">
                 <div className="hexDiv d-inline-flex mx-auto">
                   <span>LOGO</span>
@@ -156,18 +168,18 @@ class Presentaion extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="hexLine2 d-inline d-sm-flex justify-content-center hex2line2">
-            <div className="mx-auto">
-              <div className="hexDiv d-inline-flex float-right">
-                <span>LOGO</span>
-              </div>
-              <div className="hexDiv d-inline-flex float-left">
-                <span>LOGO</span>
+            <div className="hexLine2 d-flex d-sm-flex justify-content-center hex2line2">
+              <div className="mx-auto">
+                <div className="hexDiv d-inline-flex float-right">
+                  <span>LOGO</span>
+                </div>
+                <div className="hexDiv d-inline-flex float-left">
+                  <span>LOGO</span>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
         <div>
           <Subscribe/>

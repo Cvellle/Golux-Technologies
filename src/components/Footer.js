@@ -56,24 +56,24 @@ const Footer = () => {
                     <img src={gFooter}/>
                     Golux club
                 </p>
-                <div className="col-12 d-sm-flex justify-content-sm-between">
+                <div className="col-12 d-sm-flex justify-content-sm-between pr-sm-0">
                     <button className="d-block d-sm-inlin-block max-auto float-sm-left half">VIEW</button>
-                    <button className="d-block d-sm-inlin-block max-auto float-sm-right pr-0 half">JOIN</button>
+                    <button className="d-block d-sm-inlin-block max-auto float-sm-right half">JOIN</button>
                 </div>
                 <p className="text-left mx-auto">
                     <img src={mob} className="mob"/>
                     Get quote
                 </p>
-                <div className="col-12 mx-auto">
+                <div className="col-12 mx-auto pr-sm-0">
                     <button className="col-sm-12 mx-auto">BOOK A CALL</button>
                 </div>
                 <p className="text-left mx-auto">
                     <img src={mailFooter}/>
                     Newsletter
                 </p>
-                <div className="col-12 d-sm-flex justify-content-sm-between subscrFooter">
+                <div className="subscrFooter col-12 d-sm-flex justify-content-sm-between pr-sm-0">
                     <input className="" placeholder="E-mail here"/>
-                    <button className="">SUBSCRIBE</button>
+                    <button className="d-flex">SUBSCRIBE</button>
                 </div>
             </div>
 
