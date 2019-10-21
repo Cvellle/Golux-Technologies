@@ -112,9 +112,9 @@ const WSColumn = props => {
     return (
         <div className="mx-auto">           
             <img src={props.url1} alt="..." className="mx-auto d-block"/>
-            <p className="text-center">{props.name1}</p>
+            <p className="text-center mx-auto">{props.name1}</p>
             <img src={props.url2} alt="..." className="mx-auto d-block"/>
-            <p className="text-center">{props.name2}</p>
+            <p className="text-center mx-auto">{props.name2}</p>
         </div>
     )
 }

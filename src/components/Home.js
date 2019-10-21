@@ -15,8 +15,13 @@ import './css/home.css'
 
 class Home extends React.Component {
 
-  render() {
+  scrollup() {
+    // ref.scrollIntoView({behavior: 'smooth'}) 
+  }
 
+  render() {
+    // let { props, ref } = React.forwardRef((props, ref) => ({ props, ref }));
+    // ref={ref}
     return (
       <div>
         <div className="mainscreen">

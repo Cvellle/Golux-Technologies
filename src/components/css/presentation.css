@@ -16,9 +16,10 @@
 
 .multiLogo {
     width:16vw;
+    -webkit-user-drag: none !important;
 }
 
-.logo {
+.logoPres {
     top:-0.5vw !important;
     width:15.5vw !important;
 }
@@ -181,6 +182,10 @@
     opacity: 0.8;
 }
 
+.reactAngularR h4 {
+    width:73.05%;
+}
+
 .reactAngularL h4 + p {
     margin-top: 1.8vw;
     margin-bottom: -0.3vw;
@@ -206,8 +211,8 @@
 
 .share h4 {
     line-height: 2.4vw;
+    width:13.5vw;
 }
-
 
 .share img {
     filter:grayscale(1) opacity(0.25);
@@ -220,6 +225,10 @@
 .reactAngularR .titleDiv {
     border-bottom:1px solid rgba(211, 211, 211, 0.651);
     width:30vw;
+}
+
+.borderBott {
+    border-bottom:1px solid rgba(211, 211, 211, 0.651);
 }
 
 .reactAngularR p {
@@ -345,15 +354,18 @@
         width:50vw;
     }
     
-    .logo {
+    .logoPres {
         margin-top:10vw;
-        width:50vw;
+        width:50vw !important;
+        margin-left:auto;
+        margin-right:auto;
     }
     
     .logoDiv .descr {
+        margin-top:10vw !important;
         width:96vw;
         font-size: 5vw;
-        background: #f0f0f0;
+        background: transparent;
         line-height: 10vw;
         border-radius: 1vw;
         padding:1vw;
@@ -550,6 +562,10 @@
         width:90vw;
     }
 
+    .borderBott {
+        border-bottom:none !important;
+    }
+
     .titleDiv > p > div {
         line-height:5vw;
     }
@@ -573,10 +589,11 @@
     }
 
     .reactAngularR .date {
-        font-size: 5vw;
+        position: relative;
+        font-size: 4.5vw;
         opacity: 0.8;
         line-height: 4vw;
-        margin-top:0.7vw;
+        top:0.7vw !important;
         margin-bottom:2vw;
         margin-left:0 !important;
         width:10vw;
@@ -588,7 +605,8 @@
     }
 
     .reactAngularR b {
-        font-size: 5vw;
+        font-size: 6vw;
+        font-family: avenir;
         font-weight: 900;
         line-height: 4vw;
         margin-top:0.7vw;

@@ -48,7 +48,7 @@ class Presentaion extends React.Component {
         <div className="logoDiv d-sm-flex justify-content-between">
           <div className="d-block d-sm-inline-block">
             <img src={multiLogo} className="multiLogo d-block mx-auto"/>
-            <img src={goluxLett} className="logo d-block"/>
+            <img src={goluxLett} className="logoPres d-block"/>
           </div>
           <div className="descr d-block d-sm-inline-block my-auto">
             <div className="d-inline-block">
@@ -127,8 +127,8 @@ class Presentaion extends React.Component {
             <div className="d-block mx-auto titleDiv">
               <p className="date d-inline-flex d-sm-none text-center">
                 <div>
-                  <b>25</b><br/>
-                  JUN
+                  <b>04</b><br/>
+                  JUL
                 </div>
               </p>              
               <h4 className="d-inline-flex text-sm-left">React vs. Angular. Battle for the Front-end</h4>
@@ -144,7 +144,7 @@ class Presentaion extends React.Component {
               <h4 className="d-inline-flex text-sm-left">Google Sheets Tutorial for Begineers</h4>
               <p className="text-left">Artur Hebda</p>
             </div>
-            <div className="d-block mx-auto titleDiv">
+            <div className="d-block mx-auto titleDiv borderBott">
               <p className="date d-inline-flex d-sm-none text-center">
                 <div>
                   <b>25</b><br/>
@@ -152,10 +152,10 @@ class Presentaion extends React.Component {
                 </div>
               </p>              
               <h4 className="d-inline-flex text-sm-left">Product Development Roadmap - Your 
-                Guide Through the Producy Strategy</h4>
+                Guide Through the Product Strategy</h4>
               <p className="text-left">Yuri Markov</p>
             </div>
-            <div className="d-block mx-auto titleDiv border-0">
+            <div className="d-none d-sm-block mx-auto titleDiv border-0">
               <p className="date d-inline-flex d-sm-none text-center">
                 <div>
                   <b>25</b><br/>

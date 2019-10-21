@@ -55,12 +55,17 @@
 
 .info input {
     font-size: 1vw;
-    margin-bottom:2.23vw;
+    margin-bottom:2.26vw;
     height: 3.5vw;
-    width:170%;
+    width:23vw;
     border: none;
     border-bottom: 1px solid lightgray;
-    background:transparent;
+    opacity: 0.7;
+    background: transparent;
+}
+
+.info input:focus {
+    opacity: 1;
 }
 
 input[type="checkbox"] {
@@ -76,6 +81,7 @@ input[type="checkbox"] + p {
     margin-left:10%;
     font-size: 1.2vw;
     font-weight: 400;
+    opacity: 0.7;
 }
 
 .checkboxDiv {
@@ -135,6 +141,11 @@ textarea {
     height:100% !important;
     width:100% !important;
     background:transparent;
+    opacity: 0.7;
+}
+
+textarea:focus {
+    opacity: 1;
 }
 
 textarea:focus {
@@ -150,12 +161,21 @@ input:focus, .textareaDiv:focus {
     margin-top:13%;
 }
 
+.workAndServ p {
+    font-size: 1vw;
+    opacity: 0.7;
+}
+
 .work {
     margin-left:2vw !important;
 }
 
-.services img, .services img + p {
-    margin-left:3vw !important;
+.work h3 {
+    padding-left:1vw !important;
+}
+
+.services>div>div {
+    width:10vw;
 }
 
 .workAndServ h3 {
@@ -274,9 +294,13 @@ input:focus, .textareaDiv:focus {
 
     .checkboxDiv {
         border-bottom:1px solid lightgray !important;
+        margin-left:0 !important;
+        margin-top:20vw !important;
+        padding-left: 4vw !important;
     }
 
     .checkboxDiv>div {
+        margin-top:1vw;
         height: 9vw;
         width: 9vw;
     }
@@ -285,8 +309,10 @@ input:focus, .textareaDiv:focus {
         transform: translate(2vw,-4vw) scale(1.3);
     }
 
-    .checkboxDiv span {
+    .checkboxDiv p {
         width:90vw !important; 
+        line-height: 6vw !important;
+        opacity: 0.5;
     }
 
     .workAndServ {
@@ -294,6 +320,14 @@ input:focus, .textareaDiv:focus {
         padding-left:0vw !important;
         padding-right:0vw;
         width:100vw;
+    }
+
+    .work h3 {
+        padding-left:0vw !important;
+    }
+    
+    .services>div>div {
+        width:30vw;
     }
 
     .workAndServ h3 {
@@ -344,11 +378,6 @@ input:focus, .textareaDiv:focus {
 
     form input {
         width:100% !important;
-    }
-
-    .checkboxDiv {
-        margin-top:20vw !important;
-        margin-left: 4vw !important;
     }
 
     input[type="checkbox"] {

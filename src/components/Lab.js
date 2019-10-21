@@ -67,13 +67,13 @@ class Lab extends React.Component {
 class Card extends React.Component {
 
     moveLeft() {
-        this.refs.learn.style="transform: translatex(50%);"
-        this.refs.dash.style="transform: translatex(-10%);" 
+        this.refs.learn.style="transform: translatex(30%);"
+        this.refs.dash.style="transform: translatex(-30%);" 
     }
 
     moveRight() {
         this.refs.learn.style="transform: translatex(0%);"
-        this.refs.dash.style="transform: translatex(20%);" 
+        this.refs.dash.style="transform: translatex(0%);" 
     }
 
 
@@ -88,13 +88,11 @@ class Card extends React.Component {
                     <p className="text-left"><img src={yes} className="yes"/>{this.props.des1}</p>
                     <p className="text-left"><img src={yes} className="yes"/>{this.props.des2}</p>
                     <p className="text-left"><img src={yes} className="yes"/>{this.props.des3}</p>
-                    <div className="clearfix dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
-                        <div className="price pull-left"></div>
-                        <a href="#" ref="learn" className="learn d-flex justify-content-center" role="button">
-                        Learn more
-                        <div ref="dash" className="text-center dash"></div>
-                        </a>
-                        
+                    <div className="dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
+                        <div href="#" ref="learn" className="learn d-flex mx-auto justify-content-center" role="button">
+                            <span className="mx-auto text-center">Learn more</span>
+                            <div ref="dash" className="mx-auto text-center dash"></div>
+                        </div>
                     </div>
                 </div>
             </div>
