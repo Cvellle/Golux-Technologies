@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css'
 import './css/home.css'
@@ -15,7 +16,9 @@ class Whyus extends React.Component {
                 We are developing software for clients in 20 countries.
             </p>           
             <div className="dashDiv text-center">
-                <a href="">Company</a>
+                <Link to="/golux">
+                    <a href="">Company</a>
+                </Link>
                 <div className="dash"></div>
             </div>
             </div>

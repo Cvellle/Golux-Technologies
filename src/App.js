@@ -4,46 +4,40 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Presentaion from './components/Presentaion'
+import Work from './components/Work'
 import './App.css'
 
 class App extends Component {
 
   constructor(props) {
     super(props)
-    this.myRef = React.createRef()   // Create a ref object 
+    this.myRef = React.createRef()
     this.state = {
-      intervalId: 0
+      quote: false
     };
-    
-}
+  }
 
-
-
-scrollStep() {
-if (window.pageYOffset === 0) {
-  clearInterval(this.state.intervalId);
-}
-window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
-}
-
-scrollToTop() {
-let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
-this.setState({ intervalId: intervalId });
-}
-  componentDidMount() {
-    () => { this.scrollToTop(); }
+  prepareScroll = () => {
+    // this.myRef = React.createRef() // Create a ref object 
+    // myRef="quote"
+    // alert("s")
+    this.myRef.current.getAlert();
+    console.log(this)
   }
   
   
+
   render() {
+    
     return (
       <div className="App">
         <BrowserRouter>
           <div>
-            <Header ref="ref"/>
+            <Header prepareScroll={this.prepareScroll}/>
             <div className="min">
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/" component={Home} render={()=><Home ref={this.myRef}/>}/>
               <Route exact path="/presentation" component={Presentaion}/>
+              <Route exact path="/our-work" component={Work}/>              
             </div>  
             <Footer/>
           </div>

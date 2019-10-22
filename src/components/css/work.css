@@ -1,0 +1,73 @@
+.workMain {    
+    padding-top:10vw;
+    padding-left:18%;
+    padding-right:40%;
+    padding-bottom:10vw;
+ 
+}
+
+.workMain>h2 {    
+    font-size:2.7vw;
+    font-weight: 900;
+    color:#134173 !important;
+}
+
+.workMain .descr {
+    margin-top:3vw;
+    font-size:1.2vw;
+    line-height: 3vw;
+    color:#134173 !important;
+}
+
+.concepts {    
+    padding-top:8vw;
+    padding-bottom:6vw;
+}
+
+.concepts>h3 {   
+    font-size:2.2vw;
+    font-weight: 900;
+    color:#134173 !important;
+}
+
+.concepts .descr {
+    width:49%; 
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:3vw;
+    font-size:1.15vw;
+    line-height: 3vw;
+    color:#134173 !important;
+    letter-spacing: 0.02vw;
+}
+
+
+
+
+
+
+@media screen and (max-width:575px) {
+
+    .case {
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: column;
+
+    }
+
+    .case>div {
+        width:80vw;
+        margin-left:auto;
+        margin-right: auto;
+        justify-content: center;
+
+    }
+
+    .case img {
+        display: flex;
+        /* width:80vw !important; */
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+}

@@ -16,7 +16,7 @@ class Header extends React.Component {
           <img src={logo}/>        
         </NavLink>
         <div className="navRight d-block align-self-center">
-          <button className="d-none d-sm-inline-block">GET QUOTE</button>
+          <button className="d-none d-sm-inline-block" onClick={this.props.prepareScroll}>GET QUOTE</button>
           <img className="my-auto"src={profileBlue}/>
           <img className="hamburger"src={hamb}/>
         </div>

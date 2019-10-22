@@ -1,6 +1,7 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Lab from './Lab'
 import Play from './Play'
 import Aboutus from './Aboutus'
@@ -14,17 +15,31 @@ import './css/App.css'
 import './css/home.css'
 
 class Home extends React.Component {
-  componentDidMount() {
-    this.refs.main.scrollIntoView({behavior: 'smooth'})
+
+  constructor(props) {
+    super(props)
+    this.quote = React.createRef();
   }
 
-  scrollup() {
-    // ref.scrollIntoView({behavior: 'smooth'}) 
+  componentDidMount() {
+    // this.refs.quote.scrollIntoView({behavior: 'smooth'})
+    // window.scrollTo({ top: (this.refs.quote).offsetTop + window.outerHeight, behavior: 'smooth' })
   }
+  
+  getAlert() {
+    alert('getAlert from Child');
+  }
+
+  scrolldown() {
+    window.scrollTo({ top: 10, behavior: 'smooth' })
+  }
+
+componentDidUpdate() {
+  this.refs.ref.scrollIntoView({behavior: 'smooth'})
+}
 
   render() {
-    // let { props, ref } = React.forwardRef((props, ref) => ({ props, ref }));
-    // ref={ref}
+    let { props, ref } = React.forwardRef((props, ref) => ({ props, ref }));
     return (
       <div>
         <div className="mainscreen">
@@ -45,7 +60,7 @@ class Home extends React.Component {
               <img src={mainImg} className="col-xs-12 d-none d-sm-flex justify-content-end"/>
             </div>  
             <Link to="/presentation">        
-              <button className="d-none d-sm-block mainBlockBtn justify-content-start">
+              <button className="d-none d-sm-block mainBlockBtn justify-content-start" ref={ref}>
                 LEARN MORE
               </button>
               <button className="d-block d-sm-none"  ref="main">
@@ -57,7 +72,9 @@ class Home extends React.Component {
         <Lab/>
         <Play/>  
         <Aboutus/>
-        <Contactus/>
+        <div ref="quote">
+          <Contactus/>
+        </div>
         <Clients/>
         <Whyus/>
         <Subscribe/>

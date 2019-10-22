@@ -33,7 +33,6 @@ class Contactus extends React.Component {
     render() {
         return (
             <div>
-
                 <div class="contactus">
                     <div class="d-sm-flex justify-content-sm-between bookDiv">
                         <p className="text-center text-sm-left align-self-top">             
@@ -48,7 +47,7 @@ class Contactus extends React.Component {
                     </div>       
                     <p className="d-block mx-auto text-center">
                         SEND US AN EMAIL AND WE WILL GET BACK TO YOU IN NO TIME!
-                    </ p>
+                    </p>
                     <form>
                         <div class="inputs mx-auto">
                             <div class="d-sm-flex justify-content-sm-between mx-auto">
@@ -75,7 +74,6 @@ class Contactus extends React.Component {
                         <input type="submit" value="SEND INQUIRY" className="d-flex mx-auto mx-auto submit"/>
                     </form>
                 </div>
-
             </div>
         )
     }

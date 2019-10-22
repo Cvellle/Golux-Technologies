@@ -13,7 +13,7 @@ class Play extends React.Component {
       <div>
         <div className="play">
             <h2 className="text-center">Choose your play</h2>
-            <div class="d-sm-flex justify-content-sm-between">
+            <div className="d-sm-flex justify-content-sm-between">
               <div className=" mx-auto col-sm-6 justify-content-center">
                 <img src={play1} className="d-flex mx-auto justify-content-center"/>
                 <h3 className="text-center mx-auto">Dedicated <span className="d-none d-sm-inline">teams</span></h3>
