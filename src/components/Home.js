@@ -14,6 +14,9 @@ import './css/App.css'
 import './css/home.css'
 
 class Home extends React.Component {
+  componentDidMount() {
+    this.refs.main.scrollIntoView({behavior: 'smooth'})
+  }
 
   scrollup() {
     // ref.scrollIntoView({behavior: 'smooth'}) 
@@ -45,7 +48,7 @@ class Home extends React.Component {
               <button className="d-none d-sm-block mainBlockBtn justify-content-start">
                 LEARN MORE
               </button>
-              <button className="d-block d-sm-none">
+              <button className="d-block d-sm-none"  ref="main">
                 LEARN MORE
               </button>
               </Link>
