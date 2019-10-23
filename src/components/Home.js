@@ -18,25 +18,16 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props)
-    this.quote = React.createRef();
+  }
+
+  scrollQuote() {
+    // this.refs.quote.scrollIntoView({behavior: 'smooth'})
+    this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
   }
 
   componentDidMount() {
-    // this.refs.quote.scrollIntoView({behavior: 'smooth'})
-    // window.scrollTo({ top: (this.refs.quote).offsetTop + window.outerHeight, behavior: 'smooth' })
+    this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
   }
-  
-  getAlert() {
-    alert('getAlert from Child');
-  }
-
-  scrolldown() {
-    window.scrollTo({ top: 10, behavior: 'smooth' })
-  }
-
-componentDidUpdate() {
-  this.refs.ref.scrollIntoView({behavior: 'smooth'})
-}
 
   render() {
     let { props, ref } = React.forwardRef((props, ref) => ({ props, ref }));
@@ -60,7 +51,7 @@ componentDidUpdate() {
               <img src={mainImg} className="col-xs-12 d-none d-sm-flex justify-content-end"/>
             </div>  
             <Link to="/presentation">        
-              <button className="d-none d-sm-block mainBlockBtn justify-content-start" ref={ref}>
+              <button className="d-none d-sm-block mainBlockBtn justify-content-start">
                 LEARN MORE
               </button>
               <button className="d-block d-sm-none"  ref="main">

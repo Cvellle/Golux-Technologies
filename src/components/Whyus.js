@@ -16,7 +16,7 @@ class Whyus extends React.Component {
                 We are developing software for clients in 20 countries.
             </p>           
             <div className="dashDiv text-center">
-                <Link to="/golux">
+                <Link to="/our-work">
                     <a href="">Company</a>
                 </Link>
                 <div className="dash"></div>

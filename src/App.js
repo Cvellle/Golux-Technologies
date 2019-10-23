@@ -13,19 +13,16 @@ class App extends Component {
     super(props)
     this.myRef = React.createRef()
     this.state = {
-      quote: false
+      quote: true
     };
   }
 
-  prepareScroll = () => {
-    // this.myRef = React.createRef() // Create a ref object 
-    // myRef="quote"
-    // alert("s")
-    this.myRef.current.getAlert();
-    console.log(this)
+  prepareScrollQuote = () => {
+    this.myRef.current.scrollQuote();
+    this.setState({ 
+      quote: true
+  })
   }
-  
-  
 
   render() {
     
@@ -33,10 +30,10 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div>
-            <Header prepareScroll={this.prepareScroll}/>
+            <Header prepareScroll={this.prepareScrollQuote.bind(this)}/>
             <div className="min">
-              <Route exact path="/" component={Home} render={()=><Home ref={this.myRef}/>}/>
-              <Route exact path="/presentation" component={Presentaion}/>
+              <Route exact path="/" render={()=><Home ref={this.myRef} quote={this.state.quote}/>}/>
+    <Route exact path="/presentation" render={()=><Presentaion ref={this.myRef} quote={this.state.quote}/>}/>
               <Route exact path="/our-work" component={Work}/>              
             </div>  
             <Footer/>

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Play from './Play'
 import lab1 from '../images/lab1.png';
+import yes from '../images/yes.svg';
 import './css/App.css'
 import './css/home.css'
 import './css/work.css'
@@ -45,7 +45,6 @@ class Work extends React.Component {
                     <Play/>
                 </div>
                 
-
                 <div className="concepts">
                     <h3 className="text-center">Work concepts</h3>
                     <p className="descr text-center">
@@ -56,6 +55,41 @@ class Work extends React.Component {
                         ullamcorper suscipit.
                     </p>
                 </div>
+
+                <div className="delivery">
+                    <h3 className="text-center">Delivery process</h3>
+                    <div className="case flex-wrapper">
+                        <div>
+                            <img src={lab1}/>
+                        </div>
+                        <div>
+                            <img src={yes}/>
+                        </div>
+                        <div>
+                            <img src={lab1}/>
+                        </div>
+                        <div>
+                            <img src={yes}/>
+                        </div>
+                        <div>
+                            <img src={lab1}/>
+                        </div>
+                        <div>
+                            <img src={yes}/>
+                        </div>
+                        <div>
+                            <img src={lab1}/>
+                        </div>
+                    </div>
+                    <p className="descr text-center">
+                        <b>Text about delivery process here. </b>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diem nonummy
+                        nibh euismod tincidunt ut lacreet dolore magna aliguam
+                        erat volutpat. Ut wisis enim ad minim veniam, quis nostrud exerci tution
+                        ullamcorper suscipit.
+                    </p>
+                </div>
+
             </div>
         </div>    
         )

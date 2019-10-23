@@ -62,8 +62,8 @@ class Contactus extends React.Component {
                                 <div class="triangle"></div>
                             </div>
                             </div>
-                            <div className="checkboxDiv" onClick={this.checkInput.bind(this)}>
-                                <div className="d-inline-block align-self-center float-left">
+                            <div className="checkboxDiv">
+                                <div className="d-inline-block align-self-center float-left"  onClick={this.checkInput.bind(this)}>
                                     {this.state.checked ?  <img src={yes}  ref="check"/> : null}
                                 </div>
                                 <input ref="check" checked={this.state.checked ? true : false} className="d-inline-block align-self-center float-left" type="checkbox"/>
@@ -97,9 +97,9 @@ const WorkAndServ = props => {
             <div className="d-flex justify-content-between services">
                 <div className="flex-wrapper d-flex ml-auto mr-auto">
                     <h3 className="text-center col-12">SERVICES</h3> 
-                    <WSColumn url1={lab1} url2={lab3} name1="Backend" name2="Design"/>
+                    <WSColumn url1={lab1} url2={lab4} name1="Backend" name2="Design"/>
                     <WSColumn url1={lab2} url2={lab5} name1="Frontend" name2="Marketing & SEO"/>
-                    <WSColumn url1={lab4} url2={lab6} name1="Mobile Dev" name2="Business dev"/>
+                    <WSColumn url1={lab3} url2={lab6} name1="Mobile Dev" name2="Business dev"/>
                 </div>
             </div>
         </div>
