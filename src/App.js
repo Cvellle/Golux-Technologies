@@ -21,7 +21,7 @@ class App extends Component {
     this.myRef.current.scrollQuote();
     this.setState({ 
       quote: true
-  })
+    })
   }
 
   render() {
@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div>
-            <Header prepareScroll={this.prepareScrollQuote.bind(this)}/>
+            <Header prepareScroll={this.prepareScrollQuote}/>
             <div className="min">
               <Route exact path="/" render={()=><Home ref={this.myRef} quote={this.state.quote}/>}/>
               <Route exact path="/presentation" render={()=><Presentaion/>}/>

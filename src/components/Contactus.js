@@ -15,7 +15,6 @@ import './css/App.css'
 import './css/home.css'
 import './css/Contactus.css'
 
-
 class Contactus extends React.Component {
 
     constructor(props) {
@@ -23,36 +22,56 @@ class Contactus extends React.Component {
         this.state = {
             nameRight:true,
             mailRight:true,
-            proffRight:true,
+            proffessionRight:true,
             username:'',
-            mail:'',
-            profession:'',                        
+            mail:'',                     
         }
         const myRef = React.createRef()
       }
 
-    showX = (inputBoolean) => {
+    showXname = (inputBoolean1) => {
         this.setState({ 
-            nameRight: inputBoolean
+            nameRight: inputBoolean1,
+        })
+    }
+
+    showXmail = (inputBoolean2) => {
+        this.setState({ 
+            mailRight: inputBoolean2,
         })
     }
     
     changeString = (e) => {
         this.setState({
             [e.target.dataset.kind]: e.target.value
-            });
+        });
     }
 
     componentDidUpdate(prevPros, prevState) {
-        let regex = /^[A-Za-z]+$/;
         if (this.state.username !== prevState.username) {
-            (this.state.username.match(regex) ? 
-                this.showX(true) :
-                this.showX(false))    
-        }        
+            let regex1 = /^[A-Za-z]+$/;
+            (this.state.username.match(regex1) ? 
+                this.showXname(true) :
+                this.showXname(false))    
+        }   
+        if (this.state.mail !== prevState.mail) {
+            let regex1 = /^[\w+-]+(?:\.[\w+-]+)*@[\w+-]+(?:\.[\w+-]+)*(?:\.[a-zA-Z]{2,4})/;
+            (this.state.mail.match(regex1) ? 
+                this.showXmail(true) :
+                this.showXmail(false))    
+        }         
     }
 
     render() {
+
+        let changeNameBorder = this.state.nameRight ? 
+            (this.state.username !== "" ? {"border-bottom":"1px solid lightgray"} : null) :
+            (this.state.username !== "" ? {"border-bottom":"1px solid #d31654"} : null)
+
+        let changeMailBorder = this.state.mailRight ? 
+            (this.state.mail !== "" ? {"border-bottom":"1px solid lightgray"} : null) :
+            (this.state.mail !== "" ? {"border-bottom":"1px solid #d31654"} : null)
+
         return (
             <div>
                 <div className="contactus">
@@ -75,22 +94,19 @@ class Contactus extends React.Component {
                             <div className="d-sm-flex justify-content-sm-between mx-auto">
                             <div className="text-center text-sm-left align-self-top info">             
                                 <div className="inputDiv">
-                                    <input className="d-block pl-3" type="text" data-kind="username" placeholder="Name" onChange={this.changeString}/>
+                                    <input className="d-block pl-3" style={changeNameBorder} type="text" data-kind="username" placeholder="Name" onChange={this.changeString}/>
                                     {this.state.nameRight ?
                                         (this.state.username !== "" ? <img src={yes}/> : null) :
                                         (this.state.username !== "" ? <img src={x}/> : null)} 
                                 </div>
                                 <div className="inputDiv">
-                                    <input className="d-block pl-3" type="mail" data-kind="mail" placeholder="E-mail" onChange={this.changeString}/>
+                                    <input className="d-block pl-3" style={changeMailBorder} type="mail" data-kind="mail" placeholder="E-mail" onChange={this.changeString}/>
                                     {this.state.mailRight ?
                                         (this.state.mail !== "" ? <img src={yes}/> : null) :
                                         (this.state.mail !== "" ? <img src={x}/> : null)}
                                 </div> 
                                 <div className="inputDiv">
                                     <input className="d-block pl-3" type="text" data-kind="profession" placeholder="Profession" onChange={this.changeString}/>
-                                    {this.state.mailRight ?
-                                        (this.state.profession !== "" ? <img src={yes}/> : null) :
-                                        (this.state.profession !== "" ? <img src={x}/> : null)}
                                 </div> 
                             </div>
                             <div className="textareaDiv d-flex mx-auto mx-sm-0 pull-sm-right align-self-start">

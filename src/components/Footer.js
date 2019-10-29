@@ -16,7 +16,7 @@ class Footer extends React.Component {
     render() {  
         return (
             <footer className="footer">
-                <div class="d-sm-flex justify-content-sm-between">
+                <div className="d-sm-flex justify-content-sm-between">
                     <div className="">
                         <img src={logo} className="logo"/>
                     </div>
@@ -25,7 +25,7 @@ class Footer extends React.Component {
                     </div>
                 </div>
                 
-                <div class="footerContent d-sm-flex justify-content-sm-between mx-auto">
+                <div className="footerContent d-sm-flex justify-content-sm-between mx-auto">
 
                     <div className="col-sm-3 mx-auto justify-content-center firstColumn">
                         <p className="text-left mx-auto footerDescr">
