@@ -67,6 +67,29 @@ body {
     height:4vw;
     width:22%;
     font-weight: 600;
+    box-shadow:0vw 0vw 0.4vw rgba(143, 142, 142, 0.767); 
+    overflow: hidden;
+}
+
+.mainBlockBtn:hover {
+    transition: all .25s linear;
+    box-shadow:0vw 0vw 0.4vw rgba(143, 142, 142, 0.356); 
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: -40%;
+    height: 100%;
+    width:10%;
+    background: rgba(192, 192, 192, 0.473);
+    transition: all .3s linear;
+    transform: skewX(20deg) translateX(0);
+    filter:blur(1vw)
+  }
+
+.mainscreen button:hover .shine {
+    transform: skewX(20deg) translateX(28vw);
 }
 
 .lab {
@@ -349,7 +372,6 @@ h2 {
     color:#104277 !important;
 }
 
-
 .carousel-indicators  {
     position: absolute;
     bottom: -25% !important;
@@ -411,15 +433,15 @@ h2 {
 }
 
 .clients .dash  {
-    width:60%;
+    width:75%;
     position: absolute;
     z-index: 0;
     background:#00ffa3;
     height: auto;
-    height: 1rem;
+    height: 1vw;
     position: relative;
     left: 50%;
-    transform: translate(-42%, -100%);
+    transform: translate(-42%, -90%);
 }
 
 .whyus {
@@ -427,6 +449,8 @@ h2 {
     padding-top:4%;
     padding-bottom:5%;
     background: url("../../images/blueLap.png");
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 .whyus h3 {
@@ -447,12 +471,25 @@ h2 {
     margin-bottom:3%;
 }
 
-.whyus a {
+.whyus .dashDiv p {
+    display: table;
+    position: relative;
     margin-top:3%;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     font-weight: 800;
-    color: white;
+    color: rgba(255, 255, 255, 0.952);
     margin-bottom:3%;
+    z-index: 1;
+}
+
+.whyus .dashDiv .dash {
+    position: absolute;
+    background: #00ffa288;
+    height:0.8vw;
+    top:50%;
+    left:15%;
+    width:100%;
+    z-index: -1;
 }
 
 .subscribe {
@@ -514,21 +551,33 @@ h2 {
 }
 
 .join {
-    padding-top:6%;
+    padding-top:5%;
     padding-left:22%;
-    padding-right:32%;
-    padding-bottom:4%;
+    padding-right:30%;
+    padding-bottom:5%;
     background: url("../../images/goluxBlue.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:20% 30% !important;
 }
 
 .join img {
-    width:50%;
+    width:52%;
     padding-left:0%;
 }
 
 .join p {
     font-size: 1.5vw; 
+    font-family: Century Gothic;
+    font-size: 100;
     color:white; 
+    letter-spacing:0.05vw;
+}
+
+.join b {
+    font-size: 1.6vw; 
+    font-family: Century Gothic;
+    font-size: 900;
 }
 
 .join input {
@@ -551,12 +600,11 @@ h2 {
     .mainscreen {
         padding:0;
         padding-top:30vw;
-        padding-bottom:5vw !important;
+        padding-bottom:8vw !important;
         background-image: url("../../images/main-backg.png");
-        background-attachment: fixed;
         background-repeat:no-repeat;
-        background-size:200% 100%;
-        background-position:80% 50% !important;
+        background-size:450% 100%;
+        background-position:-245vw 50% !important;
     }
 
     .mainscreen img {
@@ -583,18 +631,20 @@ h2 {
         width:95%;
     }
 
-    .mainscreen button {
+    .mainBlockBtn-Mob {
+        border-radius: 2vw;
         bottom:0vw;
+        color:#144178 !important;
         margin-top:15vw !important;
         height:20vw;
-        border-radius: 0.5vw;
         font-size: 6vw !important;
         font-weight: 900;
         line-height: 14vw;
         background: white;
         border:none;
         margin-left: 5vw;
-        width:90vw;
+        width:90vw !important;
+        box-shadow:0vw 0vw 2.4vw rgba(143, 142, 142, 0.767); 
     }
 
     .lab {
@@ -622,7 +672,7 @@ h2 {
         font-size: 8vw !important;
         font-weight: 900;
         line-height: 9.5vw;
-        width:80% !important;
+        /* width:80% !important; */
         left:50% !important;
     }
 
@@ -633,6 +683,10 @@ h2 {
         width: 40vw !important;
     }   
 
+    .dashDiv {
+        padding-left:3vw !important;
+    }
+
     .lab .dash {
         position: absolute;
         z-index: -1;
@@ -642,12 +696,12 @@ h2 {
         height: 5vw !important;
     }
     
-    .lab .dashDiv a  {
+    .lab .dashDiv span  {
+        font-size: 6.2vw !important;
         position: relative;
         z-index: 1;
         font-weight:900;
         font-size: 1.2vw;
-        width:40vw !important;
         margin-left:auto;
         margin-right: auto;
     }
@@ -804,8 +858,9 @@ h2 {
 
     .clients .dash {
         background:#00ffa3;
-        transform: translate(-22vw,-5vw);
-        width: 53vw;
+        transform: translate(-38vw,-4vw);
+        width: 85%;
+        height:5vw;
     }
     
     .clients {
@@ -905,15 +960,29 @@ h2 {
         margin-right: auto;
     }
 
-    .whyus .dashDiv {
+    .whyus .company {
+        position: relative;
         font-size: 8vw !important;
         font-weight: 900;
         margin-top:28vw !important;
+        padding-left:5vw !important;
     }
 
     .whyus .dashDiv a {
         font-size: 8vw !important;
         font-weight: 900;
+    }
+
+    .whyus .dashDiv .dash {
+        position: absolute;
+        background: #00ffa288;
+        height:0.8vw;
+        top:50%;
+        left:12%;
+        width:56% !important; 
+        z-index: -1;
+        width: 85%;
+        height:5vw;
     }
 
     .subscribe {
@@ -940,10 +1009,12 @@ h2 {
     
     .subscribe .form-wrap {
         margin-top:15vw !important;
+        padding-bottom:3vw !important;
         height: 45vw;
         width:90vw;
         margin-left: auto;
         margin-right: auto;
+        border-radius: 4vw;
     }
 
     .subscribe input[type='email'] {
@@ -954,8 +1025,14 @@ h2 {
     
     .subscribe input[type='submit'] {
         height: 50%;
+        width:84vw !important;
+        display: block;
+        margin-left:auto;
+        margin-right: auto;
         border-radius: 0.2rem;
         font-size: 6vw;
+        border-radius: 2.5vw;
+        box-shadow:0vw -0vw 2.5vw rgb(143, 142, 142); 
     }
 
     .join {
@@ -979,6 +1056,12 @@ h2 {
         margin-left: 12vw;
     }
 
+    .join b {
+        font-size: 7.8vw; 
+        font-family: Century Gothic;
+        font-size: 900;
+    }
+
     .join input {
         margin-top:10vw !important;
         font-size: 7vw !important;
@@ -988,7 +1071,7 @@ h2 {
         margin-left: auto;
         margin-right: auto;
     }
-
+    
 }
 
 
@@ -1008,10 +1091,10 @@ img {
 
 @font-face {
     font-family: helveticaNeue;
-    /* src: url(sansation_light.woff); */
+    src: url(../../assets/fonts/HelveticaNue/HelveticaNeueLTStd-Bd.otf);
 }
 
 @font-face {
     font-family: proximaNova;
-    /* src: url(sansation_light.woff); */
+    /* src: url(../../assets/fonts/Proxima/AvenirNextCyr-Bold.otf); */
 }

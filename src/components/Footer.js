@@ -9,14 +9,8 @@ import insta from '../images/insta.svg';
 
 class Footer extends React.Component {
 
-    scrollup() {
+    scrollup = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
-        // var i = 10;
-        // var int = setInterval(function() {
-        //     window.scrollTo(0, i);
-        //     i += 1;
-        //     if (i <= 200) clearInterval(int);
-        // }, 20);
     }
 
     render() {  

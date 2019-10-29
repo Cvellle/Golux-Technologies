@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState  } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import work1 from '../images/work1.png';
 import work2 from '../images/work2.png';
@@ -8,6 +8,7 @@ import lab3 from '../images/mobile.png';
 import lab4 from '../images/design.png';
 import lab5 from '../images/marketing.png';
 import lab6 from '../images/business.png';
+import x from '../images/x.svg';
 import yes from '../images/yes.svg';
 import whiteUp from '../images/whiteUp.svg';
 import './css/App.css'
@@ -20,21 +21,42 @@ class Contactus extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-          checked:true
+            nameRight:true,
+            mailRight:true,
+            proffRight:true,
+            username:'',
+            mail:'',
+            profession:'',                        
         }
+        const myRef = React.createRef()
       }
 
-    checkInput() {
+    showX = (inputBoolean) => {
         this.setState({ 
-            checked: !this.state.checked
+            nameRight: inputBoolean
         })
     }
     
+    changeString = (e) => {
+        this.setState({
+            [e.target.dataset.kind]: e.target.value
+            });
+    }
+
+    componentDidUpdate(prevPros, prevState) {
+        let regex = /^[A-Za-z]+$/;
+        if (this.state.username !== prevState.username) {
+            (this.state.username.match(regex) ? 
+                this.showX(true) :
+                this.showX(false))    
+        }        
+    }
+
     render() {
         return (
             <div>
-                <div class="contactus">
-                    <div class="d-sm-flex justify-content-sm-between bookDiv">
+                <div className="contactus">
+                    <div className="d-sm-flex justify-content-sm-between bookDiv">
                         <p className="text-center text-sm-left align-self-top">             
                             Get quote
                         </p>
@@ -49,26 +71,35 @@ class Contactus extends React.Component {
                         SEND US AN EMAIL AND WE WILL GET BACK TO YOU IN NO TIME!
                     </p>
                     <form>
-                        <div class="inputs mx-auto">
-                            <div class="d-sm-flex justify-content-sm-between mx-auto">
+                        <div className="inputs mx-auto">
+                            <div className="d-sm-flex justify-content-sm-between mx-auto">
                             <div className="text-center text-sm-left align-self-top info">             
-                                <input className="d-block pl-3" type="text" placeholder="Name"/>
-                                <input className="d-block pl-3" type="mail" placeholder="E-mail"/>
-                                <input className="d-block pl-3" type="text" placeholder="Profession"/>
+                                <div className="inputDiv">
+                                    <input className="d-block pl-3" type="text" data-kind="username" placeholder="Name" onChange={this.changeString}/>
+                                    {this.state.nameRight ?
+                                        (this.state.username !== "" ? <img src={yes}/> : null) :
+                                        (this.state.username !== "" ? <img src={x}/> : null)} 
+                                </div>
+                                <div className="inputDiv">
+                                    <input className="d-block pl-3" type="mail" data-kind="mail" placeholder="E-mail" onChange={this.changeString}/>
+                                    {this.state.mailRight ?
+                                        (this.state.mail !== "" ? <img src={yes}/> : null) :
+                                        (this.state.mail !== "" ? <img src={x}/> : null)}
+                                </div> 
+                                <div className="inputDiv">
+                                    <input className="d-block pl-3" type="text" data-kind="profession" placeholder="Profession" onChange={this.changeString}/>
+                                    {this.state.mailRight ?
+                                        (this.state.profession !== "" ? <img src={yes}/> : null) :
+                                        (this.state.profession !== "" ? <img src={x}/> : null)}
+                                </div> 
                             </div>
                             <div className="textareaDiv d-flex mx-auto mx-sm-0 pull-sm-right align-self-start">
                                 <textarea placeholder="Message" className="d-block pl-3">
                                 </textarea>
-                                <div class="triangle"></div>
+                                <div className="triangle"></div>
                             </div>
                             </div>
-                            <div className="checkboxDiv">
-                                <div className="d-inline-block align-self-center float-left"  onClick={this.checkInput.bind(this)}>
-                                    {this.state.checked ?  <img src={yes}  ref="check"/> : null}
-                                </div>
-                                <input ref="check" checked={this.state.checked ? true : false} className="d-inline-block align-self-center float-left" type="checkbox"/>
-                                <p>I would like to receive the Golux club Newsletter</p>
-                            </div>
+                            <CheckBox/>
                         </div>
                         <WorkAndServ/>
                         <input type="submit" value="SEND INQUIRY" className="d-flex mx-auto mx-auto submit"/>
@@ -79,9 +110,30 @@ class Contactus extends React.Component {
     }
 }
 
+const CheckBox = () => {  
+    const [state, setState] = React.useState({
+    checked: false
+    });
+    const checkInput = () => {
+        setState(prevState => ({
+            checked: !prevState.checked
+        }));
+    }
+
+    return (
+        <div className="checkboxDiv">
+            <div className="d-inline-block align-self-center float-left"  onClick={checkInput}>
+                {state.checked ? <img src={yes} /> : null}
+            </div>
+            <input checked={state.checked ? true : false} className="d-inline-block align-self-center float-left" type="checkbox"/>
+            <p>I would like to receive the Golux club Newsletter</p>
+        </div>
+    )
+}
+
 const WorkAndServ = props => { 
     return (
-        <div class="workAndServ d-sm-flex justify-content-sm-between">
+        <div className="workAndServ d-sm-flex justify-content-sm-between">
             <h3 className="text-center d-sm-none">WORK METHOD</h3>  
             <div className="work d-flex d-sm-block d-block mx-auto mx-sm-0"> 
                 <h3 className="text-center d-none d-sm-block">WORK METHOD</h3>  

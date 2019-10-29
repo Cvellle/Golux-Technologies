@@ -23,10 +23,17 @@ class Home extends React.Component {
   scrollQuote() {
     // this.refs.quote.scrollIntoView({behavior: 'smooth'})
     this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
+    // var i = 0;
+    // var offset = this.refs.quote;
+    // var int = setInterval(function() {
+    //   window.scrollTo(0, i);
+    //   i += 15;
+    //   if (i >= offset.offsetTop) clearInterval(int);
+    //   }, 0.1);
   }
 
   componentDidMount() {
-    this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
+    // this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
   }
 
   render() {
@@ -51,10 +58,11 @@ class Home extends React.Component {
               <img src={mainImg} className="col-xs-12 d-none d-sm-flex justify-content-end"/>
             </div>  
             <Link to="/presentation">        
-              <button className="d-none d-sm-block mainBlockBtn justify-content-start">
+              <button className="d-none d-sm-block mainBlockBtn justify-content-sm-start">
+              <div className="shine d-none d-sm-block"></div>
                 LEARN MORE
               </button>
-              <button className="d-block d-sm-none"  ref="main">
+              <button className="d-block d-sm-none mainBlockBtn-Mob"  ref="main">
                 LEARN MORE
               </button>
               </Link>

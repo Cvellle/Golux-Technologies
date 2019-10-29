@@ -33,8 +33,8 @@ class App extends Component {
             <Header prepareScroll={this.prepareScrollQuote.bind(this)}/>
             <div className="min">
               <Route exact path="/" render={()=><Home ref={this.myRef} quote={this.state.quote}/>}/>
-    <Route exact path="/presentation" render={()=><Presentaion ref={this.myRef} quote={this.state.quote}/>}/>
-              <Route exact path="/our-work" component={Work}/>              
+              <Route exact path="/presentation" render={()=><Presentaion/>}/>
+              <Route exact path="/our-work" render={()=><Work/>}/>              
             </div>  
             <Footer/>
           </div>
