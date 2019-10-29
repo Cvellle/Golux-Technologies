@@ -65,11 +65,11 @@ class Contactus extends React.Component {
     render() {
 
         let changeNameBorder = this.state.nameRight ? 
-            (this.state.username !== "" ? {"border-bottom":"1px solid lightgray"} : null) :
+            (this.state.username !== "" ? {"border-bottom":"1px solid #0880b3"} : null) :
             (this.state.username !== "" ? {"border-bottom":"1px solid #d31654"} : null)
 
         let changeMailBorder = this.state.mailRight ? 
-            (this.state.mail !== "" ? {"border-bottom":"1px solid lightgray"} : null) :
+            (this.state.mail !== "" ? {"border-bottom":"1px solid #0880b3"} : null) :
             (this.state.mail !== "" ? {"border-bottom":"1px solid #d31654"} : null)
 
         return (

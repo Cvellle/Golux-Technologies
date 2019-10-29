@@ -22,17 +22,6 @@ class Home extends React.Component {
 
   scrollQuote() {
     this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
-    // var i = 0;
-    // var offset = this.refs.quote;
-    // var int = setInterval(function() {
-    //   window.scrollTo(0, i);
-    //   i += 15;
-    //   if (i >= offset.offsetTop) clearInterval(int);
-    //   }, 0.1);
-  }
-
-  componentDidMount() {
-    // this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
   }
 
   render() {
