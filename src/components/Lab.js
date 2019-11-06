@@ -35,10 +35,10 @@ class Lab extends React.Component {
                         thrill, and break the boundries of digital. By engaging even one developer, you
                         receive an entire machinery of experts to back you up. Whatever the Q, we got the A.
                     </p>
-                    <div className="dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
+                    <div className="greenBgDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
                         <div className="price pull-left"></div>
                         <a href="#" ref="learn" className="learn d-flex justify-content-center" role="button">our tools</a>
-                        <div ref="dash" className="text-center dash"></div>
+                        <div ref="greenBg" className="text-center greenBg"></div>
                     </div>
 
                     <div className="container software">
@@ -68,12 +68,12 @@ class Card extends React.Component {
 
     moveLeft() {
         this.refs.learn.style="transform: translatex(30%);"
-        this.refs.dash.style="transform: translatex(-30%);" 
+        this.refs.greenBg.style="transform: translatex(-30%);" 
     }
 
     moveRight() {
         this.refs.learn.style="transform: translatex(0%);"
-        this.refs.dash.style="transform: translatex(0%);" 
+        this.refs.greenBg.style="transform: translatex(0%);" 
     }
 
 
@@ -88,10 +88,10 @@ class Card extends React.Component {
                     <p className="text-left"><img src={yes} className="yes"/>{this.props.des1}</p>
                     <p className="text-left"><img src={yes} className="yes"/>{this.props.des2}</p>
                     <p className="text-left"><img src={yes} className="yes"/>{this.props.des3}</p>
-                    <div className="dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
+                    <div className="greenBgDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
                         <div href="#" ref="learn" className="learn d-flex mx-auto justify-content-center" role="button">
                             <span className="mx-auto text-center">Learn more</span>
-                            <div ref="dash" className="mx-auto text-center dash"></div>
+                            <div ref="greenBg" className="mx-auto text-center greenBg"></div>
                         </div>
                     </div>
                 </div>

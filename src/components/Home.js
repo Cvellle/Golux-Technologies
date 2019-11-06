@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Lab from './Lab'
@@ -20,12 +19,11 @@ class Home extends React.Component {
     super(props)
   }
 
-  scrollQuote() {
+  scrollToQuote() {
     this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
   }
 
   render() {
-    let { props, ref } = React.forwardRef((props, ref) => ({ props, ref }));
     return (
       <div>
         <div className="mainscreen">

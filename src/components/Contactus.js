@@ -20,24 +20,22 @@ class Contactus extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            nameRight:true,
-            mailRight:true,
-            proffessionRight:true,
+            nameCorrect:true,
+            mailCorrect:true,
             username:'',
             mail:'',                     
         }
-        const myRef = React.createRef()
       }
 
-    showXname = (inputBoolean1) => {
+    showXinName = (NameInputBoolean) => {
         this.setState({ 
-            nameRight: inputBoolean1,
+            nameCorrect: NameInputBoolean,
         })
     }
 
-    showXmail = (inputBoolean2) => {
+    showXinMail = (mailInputBoolean) => {
         this.setState({ 
-            mailRight: inputBoolean2,
+            mailCorrect: mailInputBoolean,
         })
     }
     
@@ -51,24 +49,24 @@ class Contactus extends React.Component {
         if (this.state.username !== prevState.username) {
             let regex1 = /^[A-Za-z]+$/;
             (this.state.username.match(regex1) ? 
-                this.showXname(true) :
-                this.showXname(false))    
+                this.showXinName(true) :
+                this.showXinName(false))    
         }   
         if (this.state.mail !== prevState.mail) {
             let regex1 = /^[\w+-]+(?:\.[\w+-]+)*@[\w+-]+(?:\.[\w+-]+)*(?:\.[a-zA-Z]{2,4})/;
             (this.state.mail.match(regex1) ? 
-                this.showXmail(true) :
-                this.showXmail(false))    
+                this.showXinMail(true) :
+                this.showXinMail(false))    
         }         
     }
 
     render() {
 
-        let changeNameBorder = this.state.nameRight ? 
+        let changeNameBorder = this.state.nameCorrect ? 
             (this.state.username !== "" ? {"border-bottom":"1px solid #0880b3"} : null) :
             (this.state.username !== "" ? {"border-bottom":"1px solid #d31654"} : null)
 
-        let changeMailBorder = this.state.mailRight ? 
+        let changeMailBorder = this.state.mailCorrect ? 
             (this.state.mail !== "" ? {"border-bottom":"1px solid #0880b3"} : null) :
             (this.state.mail !== "" ? {"border-bottom":"1px solid #d31654"} : null)
 
@@ -79,7 +77,7 @@ class Contactus extends React.Component {
                         <p className="text-center text-sm-left align-self-top">             
                             Get quote
                         </p>
-                        <div className="d-block mx-auto d-sm-flex mx-sm-0 float-sm-right align-self-start">
+                        <div className="d-block mx-auto d-sm-flex mx-sm-0 float-sm-Correct align-self-start">
                             <button className="d-block mx-auto d-sm-flex mx-sm-0 float-sm-right align-self-start">
                             <img src={whiteUp} className="d-inline-block my-auto"/>
                             <span>BOOK A CALL</span>
@@ -95,13 +93,13 @@ class Contactus extends React.Component {
                             <div className="text-center text-sm-left align-self-top info">             
                                 <div className="inputDiv">
                                     <input className="d-block pl-3" style={changeNameBorder} type="text" data-kind="username" placeholder="Name" onChange={this.changeString}/>
-                                    {this.state.nameRight ?
+                                    {this.state.nameCorrect ?
                                         (this.state.username !== "" ? <img src={yes}/> : null) :
                                         (this.state.username !== "" ? <img src={x}/> : null)} 
                                 </div>
                                 <div className="inputDiv">
                                     <input className="d-block pl-3" style={changeMailBorder} type="mail" data-kind="mail" placeholder="E-mail" onChange={this.changeString}/>
-                                    {this.state.mailRight ?
+                                    {this.state.mailCorrect ?
                                         (this.state.mail !== "" ? <img src={yes}/> : null) :
                                         (this.state.mail !== "" ? <img src={x}/> : null)}
                                 </div> 

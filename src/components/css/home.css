@@ -67,6 +67,7 @@ body {
     font-weight: 600;
     box-shadow:0vw 0vw 0.4vw rgba(143, 142, 142, 0.767); 
     overflow: hidden;
+    transition:0.5s;
 }
 
 .mainBlockBtn:hover {
@@ -81,12 +82,12 @@ body {
     height: 100%;
     width:10%;
     background: rgba(192, 192, 192, 0.473);
-    transition: all .3s linear;
     transform: skewX(20deg) translateX(0);
     filter:blur(1vw)
   }
 
 .mainscreen button:hover .shine {
+    transition: 0.3s linear;
     transform: skewX(20deg) translateX(28vw);
 }
 
@@ -150,7 +151,7 @@ h2 {
     transform: translatex(-15%);
 }
 
-.labDescr + div .dash  {
+.labDescr + div .greenBg  {
     position: absolute;
     z-index: 0;
     background:#00ffa3;
@@ -161,7 +162,7 @@ h2 {
 }
 
 
-.lab .dashDiv {
+.lab .greenBgDiv {
     height:2vw;
     display: flex;
     margin-left: auto;
@@ -177,7 +178,7 @@ h2 {
     font-size: 1.2vw;
 }
 
-.lab .dash  {
+.lab .greenBg  {
     position: absolute;
     top:0.8vw;
     left:1vw;
@@ -189,7 +190,7 @@ h2 {
     z-index:-1;
 }
 
-.lab .dashDiv a:hover   {
+.lab .greenBgDiv a:hover   {
     color:black !important;
     text-decoration: none  !important;
 }
@@ -218,6 +219,13 @@ h2 {
 .lab .card img {
     width:75%;
     height: auto;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.lab .card img:hover {
+    transition: 0.7s;
+    opacity: 0.7;
 }
 
 .lab h4 {
@@ -323,6 +331,7 @@ h2 {
     margin-top:16%;
     width:85% !important;
     margin-bottom: 22%;
+    cursor: pointer;
 }
 
 .clients {
@@ -390,23 +399,33 @@ h2 {
     background:#104277 !important; 
 }
 
-.carousel-control-prev .carousel-control-next {
-    width: 12%;
-    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+.carousel-control-prev, .carousel-control-next {
+    height: 4vw;
 }
 
-.carousel-control-next:hover, .carousel-control-prev:hover  {
-   -webkit-filter: sepia(100%) hue-rotate(190deg) saturate(500%) brightness(0.4);
+.carousel-control-prev:hover .grayArrow {
+    display: none;
 }
 
+.carousel-control-prev:hover .blueArrow {
+    display: block !important;
+}
+
+.carousel-control-next:hover .grayArrow {
+    display: none;
+}
+
+.carousel-control-next:hover .blueArrow {
+    display: block !important;
+}
 
 .carousel-control-prev img {
-    transform: rotate(180deg) scale(2) translatex(-50%);
+    transform: rotate(180deg) scale(1.6) translatex(-50%);
     cursor: pointer;
 }
 
 .carousel-control-next img {
-    transform: scale(2);
+    transform: scale(1.6);
     cursor: pointer;
 }
 
@@ -419,18 +438,18 @@ h2 {
     cursor: pointer;
 }
 
-.clients .dashDiv span {
+.clients .greenBgDiv span {
     position: relative;
     z-index:1;
     cursor: pointer !important;
 }
 
-.clients .dashDiv span:hover {
+.clients .greenBgDiv span:hover {
     text-decoration: none;
     color:black;
 }
 
-.clients .dash  {
+.clients .greenBg  {
     width:75%;
     position: absolute;
     z-index: 0;
@@ -469,7 +488,7 @@ h2 {
     margin-bottom:3%;
 }
 
-.whyus .dashDiv p {
+.whyus .greenBgDiv p {
     display: table;
     position: relative;
     margin-top:3%;
@@ -480,7 +499,7 @@ h2 {
     z-index: 1;
 }
 
-.whyus .dashDiv .dash {
+.whyus .greenBgDiv .greenBg {
     position: absolute;
     background: #00ffa288;
     height:0.8vw;
@@ -665,7 +684,7 @@ h2 {
         width:80%;
     }
 
-    .lab .dashDiv {
+    .lab .greenBgDiv {
         margin-top:0vw !important;
         font-size: 8vw !important;
         font-weight: 900;
@@ -681,11 +700,11 @@ h2 {
         width: 40vw !important;
     }   
 
-    .dashDiv {
+    .greenBgDiv {
         padding-left:3vw !important;
     }
 
-    .lab .dash {
+    .lab .greenBg {
         position: absolute;
         z-index: -1;
         background:#00ffa3;
@@ -694,7 +713,7 @@ h2 {
         height: 5vw !important;
     }
     
-    .lab .dashDiv span  {
+    .lab .greenBgDiv span  {
         font-size: 6.2vw !important;
         position: relative;
         z-index: 1;
@@ -714,7 +733,7 @@ h2 {
         font-size: 7vw !important;
     }
 
-    .labDescr + div .dash  {
+    .labDescr + div .greenBg  {
         width:30vw !important;
         position: relative;
         z-index: 0;
@@ -854,7 +873,7 @@ h2 {
         width:80%;
     }
 
-    .clients .dash {
+    .clients .greenBg {
         background:#00ffa3;
         transform: translate(-38vw,-4vw);
         width: 85%;
@@ -932,7 +951,7 @@ h2 {
         font-size: 5vw !important;
     }
     
-    .clients .dashDiv {
+    .clients .greenBgDiv {
         font-size: 7.5vw;
         font-weight: 900;
         margin-top:5vw !important;
@@ -966,12 +985,12 @@ h2 {
         padding-left:5vw !important;
     }
 
-    .whyus .dashDiv a {
+    .whyus .greenBgDiv a {
         font-size: 8vw !important;
         font-weight: 900;
     }
 
-    .whyus .dashDiv .dash {
+    .whyus .greenBgDiv .greenBg {
         position: absolute;
         background: #00ffa288;
         height:0.8vw;

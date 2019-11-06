@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import yuri from '../images/carouselImg1.png';
 import next from '../images/next.svg';
+import nextBlue from '../images/nextBlue.png';
 import './css/App.css'
 import './css/home.css'
 
@@ -33,17 +34,19 @@ class Clients extends React.Component {
                 <CarouselItem active=""/>
               </div>
               <a className="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                <img src={next}/>
+                <img src={next} className="grayArrow"/>
+                <img src={nextBlue} className="blueArrow d-none"/>
                 <span className="sr-only">Previous</span>
               </a>
               <a className="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                <img src={next}/>
+                <img src={next} className="grayArrow"/>
+                <img src={nextBlue} className="blueArrow d-none"/>
                 <span className="sr-only">Next</span>
               </a>
             </div>
-            <div className="dashDiv text-center d-block mx-auto" ref="dashDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
+            <div className="greenBgDiv text-center d-block mx-auto" ref="greenBgDiv" onMouseOver={this.moveLeft.bind(this)} onMouseOut={this.moveRight.bind(this)}>
               <span href="#" ref="learn">View all clients</span>
-              <div className="dash"></div>
+              <div className="greenBg"></div>
             </div>
         </div>
       )

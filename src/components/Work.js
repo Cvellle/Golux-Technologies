@@ -6,10 +6,6 @@ import Join from './Join'
 import lab1 from '../images/lab1.png';
 import yes from '../images/yes.svg';
 import transpHex from '../images/transpHex.png';
-// import bluehex1 from '../images/bluehex1.png';
-// import bluehex2 from '../images/bluehex2.png';
-// import bluehex3 from '../images/bluehex3.png';
-// import bluehex4 from '../images/bluehex4.png';
 import rightArrow from '../images/rightArrow.png';
 import case1 from '../images/case1.png';
 import case2 from '../images/case2.png';

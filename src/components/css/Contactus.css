@@ -198,6 +198,7 @@ input:focus, .textareaDiv:focus {
 
 .workAndServ img {
     width:7.3vw;
+    cursor: pointer;
 }
 
 .work img {
