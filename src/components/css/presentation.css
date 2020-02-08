@@ -11,12 +11,14 @@
     padding-left:22%;
     padding-right:18%;
     padding-bottom:5vw;
-    background:rgb(245, 245, 245);
+    background: url("../../images/dotsWawe.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:90% 90% !important;
 }
 
 .multiLogo {
     width:16vw;
-    -webkit-user-drag: none !important;
 }
 
 .logoPres {
@@ -86,10 +88,59 @@
 }
 
 .niche {
+    position: relative;
     padding-top:4vw;
-    padding-left:10%;
+    padding-bottom:5vw;
+    padding-left:45%;
     padding-right:10%;
-    background:rgb(1, 81, 155);
+    background-repeat:no-repeat;
+    background-size:103% 142.5%;
+    background-position:-3vw 0vw;  
+    z-index:1; 
+}
+
+.niche .afterDiv1 {
+    position: absolute;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(rgba(0, 0, 255, 0.144), blue), url("../../images/compTable.jpg");
+    background-repeat:no-repeat;
+    background-size:103% 142.5%;
+    background-position:-3vw 0vw;  
+    z-index:1; 
+    background-blend-mode: overlay;
+    filter: saturate(0) grayscale(150%) brightness(0.9) blur(0.02vw);
+    z-index: 1;
+}
+
+.niche .afterDiv2 {
+    position: absolute;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter: saturate(0) grayscale(100%) brightness(1) blur(0.02vw);
+    opacity: 0.4;
+    z-index: 2;
+}
+
+.niche .afterDiv3 {
+    padding-bottom:12vw !important;
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: url("../../images/transpHexagons.png");
+    background-repeat:repeat;
+    background-size:cover;
+    background-position:0vw 50%;
+    z-index: 3;  
 }
 
 .niche img {
@@ -99,17 +150,19 @@
 
 .niche h3 {
     color:white;
-    font-size: 2.2vw;
-    margin-bottom: 4vw;
+    font-size: 2.35vw;
+    font-weight: 700;
+    margin-bottom: 3vw;
 }
 
 .niche .descr {
     width:29vw;
     font-size: 1.2vw;
     line-height: 2.5vw;
-    color:white;
+    color:rgba(255, 255, 255, 0.856);
     border-radius: 0.4vw;
     padding:1vw;
+    z-index: 4; 
 }
 
 .loyality {

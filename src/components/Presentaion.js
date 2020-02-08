@@ -48,7 +48,6 @@ class Presentaion extends React.Component {
         <div className="logoDiv d-sm-flex justify-content-between">
           <div className="d-block d-sm-inline-block">
             <img src={multiLogo} className="multiLogo d-block mx-auto"/>
-            <img src={goluxLett} className="logoPres d-block"/>
           </div>
           <div className="descr d-block d-sm-inline-block my-auto">
             <div className="d-inline-block">
@@ -75,17 +74,14 @@ class Presentaion extends React.Component {
         </div>
 
         <div className="niche d-sm-flex justify-content-between">
-          <div className="d-block d-sm-inline-block">
-            <img src={profileBlue} className="hexTransparent d-block mx-auto"/>
-          </div>
-          <div>
-            
-          </div>
+          <div className="afterDiv1"></div>
+          <div className="afterDiv2"></div>
+          <div className="afterDiv3"></div>
           <div className="descr d-block d-sm-inline-block mx-auto">
             <h3 className="text-center">
               Golux niche
             </h3>
-            <div className="text-center">
+            <div className="text-center ">
               <b>Description of nitche here. </b>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

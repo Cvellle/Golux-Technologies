@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState  } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import work1 from '../images/work1.png';
 import work2 from '../images/work2.png';
@@ -8,37 +8,76 @@ import lab3 from '../images/mobile.png';
 import lab4 from '../images/design.png';
 import lab5 from '../images/marketing.png';
 import lab6 from '../images/business.png';
+import x from '../images/x.svg';
 import yes from '../images/yes.svg';
 import whiteUp from '../images/whiteUp.svg';
 import './css/App.css'
 import './css/home.css'
 import './css/Contactus.css'
 
-
 class Contactus extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-          checked:true
+            nameCorrect:true,
+            mailCorrect:true,
+            username:'',
+            mail:'',                     
         }
       }
 
-    checkInput() {
+    showXinName = (NameInputBoolean) => {
         this.setState({ 
-            checked: !this.state.checked
+            nameCorrect: NameInputBoolean,
+        })
+    }
+
+    showXinMail = (mailInputBoolean) => {
+        this.setState({ 
+            mailCorrect: mailInputBoolean,
         })
     }
     
+    changeString = (e) => {
+        this.setState({
+            [e.target.dataset.kind]: e.target.value
+        });
+    }
+
+    componentDidUpdate(prevPros, prevState) {
+        if (this.state.username !== prevState.username) {
+            let regex1 = /^[A-Za-z]+$/;
+            (this.state.username.match(regex1) ? 
+                this.showXinName(true) :
+                this.showXinName(false))    
+        }   
+        if (this.state.mail !== prevState.mail) {
+            let regex1 = /^[\w+-]+(?:\.[\w+-]+)*@[\w+-]+(?:\.[\w+-]+)*(?:\.[a-zA-Z]{2,4})/;
+            (this.state.mail.match(regex1) ? 
+                this.showXinMail(true) :
+                this.showXinMail(false))    
+        }         
+    }
+
     render() {
+
+        let changeNameBorder = this.state.nameCorrect ? 
+            (this.state.username !== "" ? {"border-bottom":"1px solid #0880b3"} : null) :
+            (this.state.username !== "" ? {"border-bottom":"1px solid #d31654"} : null)
+
+        let changeMailBorder = this.state.mailCorrect ? 
+            (this.state.mail !== "" ? {"border-bottom":"1px solid #0880b3"} : null) :
+            (this.state.mail !== "" ? {"border-bottom":"1px solid #d31654"} : null)
+
         return (
             <div>
-                <div class="contactus">
-                    <div class="d-sm-flex justify-content-sm-between bookDiv">
+                <div className="contactus">
+                    <div className="d-sm-flex justify-content-sm-between bookDiv">
                         <p className="text-center text-sm-left align-self-top">             
                             Get quote
                         </p>
-                        <div className="d-block mx-auto d-sm-flex mx-sm-0 float-sm-right align-self-start">
+                        <div className="d-block mx-auto d-sm-flex mx-sm-0 float-sm-Correct align-self-start">
                             <button className="d-block mx-auto d-sm-flex mx-sm-0 float-sm-right align-self-start">
                             <img src={whiteUp} className="d-inline-block my-auto"/>
                             <span>BOOK A CALL</span>
@@ -49,26 +88,32 @@ class Contactus extends React.Component {
                         SEND US AN EMAIL AND WE WILL GET BACK TO YOU IN NO TIME!
                     </p>
                     <form>
-                        <div class="inputs mx-auto">
-                            <div class="d-sm-flex justify-content-sm-between mx-auto">
+                        <div className="inputs mx-auto">
+                            <div className="d-sm-flex justify-content-sm-between mx-auto">
                             <div className="text-center text-sm-left align-self-top info">             
-                                <input className="d-block pl-3" type="text" placeholder="Name"/>
-                                <input className="d-block pl-3" type="mail" placeholder="E-mail"/>
-                                <input className="d-block pl-3" type="text" placeholder="Profession"/>
+                                <div className="inputDiv">
+                                    <input className="d-block pl-3" style={changeNameBorder} type="text" data-kind="username" placeholder="Name" onChange={this.changeString}/>
+                                    {this.state.nameCorrect ?
+                                        (this.state.username !== "" ? <img src={yes}/> : null) :
+                                        (this.state.username !== "" ? <img src={x}/> : null)} 
+                                </div>
+                                <div className="inputDiv">
+                                    <input className="d-block pl-3" style={changeMailBorder} type="mail" data-kind="mail" placeholder="E-mail" onChange={this.changeString}/>
+                                    {this.state.mailCorrect ?
+                                        (this.state.mail !== "" ? <img src={yes}/> : null) :
+                                        (this.state.mail !== "" ? <img src={x}/> : null)}
+                                </div> 
+                                <div className="inputDiv">
+                                    <input className="d-block pl-3" type="text" data-kind="profession" placeholder="Profession" onChange={this.changeString}/>
+                                </div> 
                             </div>
                             <div className="textareaDiv d-flex mx-auto mx-sm-0 pull-sm-right align-self-start">
                                 <textarea placeholder="Message" className="d-block pl-3">
                                 </textarea>
-                                <div class="triangle"></div>
+                                <div className="triangle"></div>
                             </div>
                             </div>
-                            <div className="checkboxDiv">
-                                <div className="d-inline-block align-self-center float-left"  onClick={this.checkInput.bind(this)}>
-                                    {this.state.checked ?  <img src={yes}  ref="check"/> : null}
-                                </div>
-                                <input ref="check" checked={this.state.checked ? true : false} className="d-inline-block align-self-center float-left" type="checkbox"/>
-                                <p>I would like to receive the Golux club Newsletter</p>
-                            </div>
+                            <CheckBox/>
                         </div>
                         <WorkAndServ/>
                         <input type="submit" value="SEND INQUIRY" className="d-flex mx-auto mx-auto submit"/>
@@ -79,9 +124,30 @@ class Contactus extends React.Component {
     }
 }
 
+const CheckBox = () => {  
+    const [state, setState] = React.useState({
+    checked: false
+    });
+    const checkInput = () => {
+        setState(prevState => ({
+            checked: !prevState.checked
+        }));
+    }
+
+    return (
+        <div className="checkboxDiv">
+            <div className="d-inline-block align-self-center float-left"  onClick={checkInput}>
+                {state.checked ? <img src={yes} /> : null}
+            </div>
+            <input checked={state.checked ? true : false} className="d-inline-block align-self-center float-left" type="checkbox"/>
+            <p>I would like to receive the Golux club Newsletter</p>
+        </div>
+    )
+}
+
 const WorkAndServ = props => { 
     return (
-        <div class="workAndServ d-sm-flex justify-content-sm-between">
+        <div className="workAndServ d-sm-flex justify-content-sm-between">
             <h3 className="text-center d-sm-none">WORK METHOD</h3>  
             <div className="work d-flex d-sm-block d-block mx-auto mx-sm-0"> 
                 <h3 className="text-center d-none d-sm-block">WORK METHOD</h3>  

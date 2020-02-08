@@ -1,9 +1,9 @@
 .workMain {    
-    padding-top:10vw;
+    padding-top:9vw;
     padding-left:18%;
     padding-right:40%;
-    padding-bottom:10vw;
- 
+    padding-bottom:8vw;
+    background:rgba(231, 240, 245, 0.747);
 }
 
 .workMain>h2 {    
@@ -17,6 +17,20 @@
     font-size:1.2vw;
     line-height: 3vw;
     color:#134173 !important;
+}
+
+.case {    
+    padding-top:6vw;
+    padding-bottom:6vw;
+    padding-left:25%;
+    padding-right:25%;
+}
+
+.case h4 {    
+    margin-top:1vw;
+    font-size:1.2vw;
+    font-weight: 900;
+    opacity: 0.7;
 }
 
 .concepts {    
@@ -34,13 +48,84 @@
     width:49%; 
     margin-left:auto;
     margin-right:auto;
-    margin-top:3vw;
+    margin-top:2vw;
     font-size:1.15vw;
-    line-height: 3vw;
-    color:#134173 !important;
+    line-height: 2.5vw;
+    color:black;
+    opacity: 0.85;
     letter-spacing: 0.02vw;
 }
 
+.delivery {    
+    padding-top:8vw;
+    padding-bottom:6vw;
+    background:#134c6d;
+}
+
+.delivery>h3 {   
+    font-size:2.2vw;
+    font-weight: 900;
+    color:white !important;
+    margin-bottom:3vw;
+}
+
+.deliveryImages {
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+    width:44%;
+}
+
+.deliveryImages>div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+}
+
+.deliveryImages img {
+    width:6vw; 
+    height: auto;
+}
+
+.transpHex {
+    opacity:0.2;
+}
+
+.deliveryImages span {
+    position: absolute;
+    color:white;
+    font-size:2vw;
+    font-weight: 900;
+}
+
+.delivery .descr {
+    width:48%; 
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:3vw;
+    font-size:1.15vw;
+    line-height: 3vw;
+    color:white !important;
+    letter-spacing: 0.02vw;
+    opacity:0.9;
+}
+
+.hexNumber {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../images/hexNumber.png");
+    background-size: cover;
+    width:6.5vw !important;
+    height:6.8vw;
+    left:0;
+    width:2vw;
+    margin-left:2vw !important; 
+    margin-right:2vw !important; 
+    margin-top:1vw !important;
+}
 
 
 
@@ -48,6 +133,136 @@
 
 @media screen and (max-width:575px) {
 
+    .workMain {    
+        padding-top:17vw;
+        padding-left:12.5%;
+        padding-right:12.5%;
+        padding-bottom:8vw;
+        background:rgba(231, 240, 245, 0.747);
+    }
+    
+    .workMain>h2 {    
+        font-size:9vw;
+        font-weight: 800;
+        color:#134173 !important;
+    }
+    
+    .workMain .descr {
+        margin-top:8vw;
+        font-size:5.13vw;
+        line-height: 10vw;
+        color:#134173 !important;
+    }
+    
+    .case {    
+        padding-top:20vw;
+        padding-bottom:6vw;
+        padding-left:25%;
+        padding-right:25%;
+    }
+    
+    .case h4 {    
+        margin-top:4vw;
+        font-size:5vw;
+        font-weight: 900;
+        opacity: 1;
+        color:#134173 !important;
+        margin-bottom:18vw;
+    }
+    
+    .concepts {    
+        padding-top:15vw;
+        padding-bottom:13vw;
+    }
+    
+    .concepts>h3 {   
+        font-size:9vw;
+        font-weight: 900;
+        color:#134173 !important;
+    }
+    
+    .concepts .descr {
+        margin-top:12vw !important;
+        width:85vw; 
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:3vw;
+        font-size:4.8vw;
+        line-height: 9vw;
+        letter-spacing: 0.02vw;
+        opacity: 0.8;
+    }
+    
+    .delivery {    
+        padding-top:20vw;
+        padding-bottom:15vw;
+        background:linear-gradient(#164768, #0d5779);
+    }
+    
+    .delivery>h3 {   
+        font-size:8vw;
+        font-weight: 700;
+        color:white !important;
+        margin-bottom:0vw;
+    }
+    
+    .deliveryImages {
+        align-items: center;
+        margin-left:auto;
+        margin-right:auto;
+        width:70vw;
+    }
+
+    .deliveryImages div {
+        margin-top:20vw;
+        margin-left:0vw;
+        margin-right:0vw;
+    }
+    
+    
+    .deliveryImages img {
+        width:22vw; 
+        height: auto;
+    }
+
+    .deliveryImages span {
+        position: absolute;
+        color:white;
+        font-size:8vw;
+        font-weight: 900;
+    }
+    
+    .hideArrow {
+        display: none;
+    }
+
+    .delivery .descr {
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:15vw;
+        font-size:5vw;
+        line-height: 10vw;
+        color:white !important;
+        letter-spacing: 0.02vw;
+    }
+    
+    .hexNumber {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../../images/hexNumber.png");
+        background-size: cover;
+        width:6.5vw !important;
+        height:6.8vw;
+        left:0;
+        width:2vw;
+        margin-left:2vw !important; 
+        margin-right:2vw !important; 
+        margin-top:1vw !important;
+    }
+    
     .case {
         display: flex;
         flex-wrap:wrap;

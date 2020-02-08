@@ -1,8 +1,15 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Play from './Play'
+import Subscribe from './Subscribe'
+import Join from './Join'
 import lab1 from '../images/lab1.png';
 import yes from '../images/yes.svg';
+import transpHex from '../images/transpHex.png';
+import rightArrow from '../images/rightArrow.png';
+import case1 from '../images/case1.png';
+import case2 from '../images/case2.png';
+import case3 from '../images/case3.png';
 import './css/App.css'
 import './css/home.css'
 import './css/work.css'
@@ -28,15 +35,15 @@ class Work extends React.Component {
 
                 <div className="case flex-wrapper">
                     <div>
-                        <img src={lab1}/>
+                        <img src={case1}/>
                         <h4 className="text-center">SERVICES</h4>
                     </div>
                     <div>
-                        <img src={lab1}/>
+                        <img src={case2}/>
                         <h4 className="text-center">CASE STUDIES</h4>
                     </div>
                     <div>
-                        <img src={lab1}/>
+                        <img src={case3}/>
                         <h4 className="text-center">PROJECTS</h4>
                     </div>
                 </div>
@@ -58,27 +65,31 @@ class Work extends React.Component {
 
                 <div className="delivery">
                     <h3 className="text-center">Delivery process</h3>
-                    <div className="case flex-wrapper">
+                    <div className="flex-wrapper deliveryImages">
                         <div>
-                            <img src={lab1}/>
+                            <img src={transpHex} className="transpHex"/>
+                            <span>1</span>
                         </div>
                         <div>
-                            <img src={yes}/>
+                            <img src={rightArrow}/>
                         </div>
                         <div>
-                            <img src={lab1}/>
+                        <img src={transpHex} className="transpHex"/>
+                            <span>2</span>
                         </div>
                         <div>
-                            <img src={yes}/>
+                            <img src={rightArrow} className="hideArrow"/>
                         </div>
                         <div>
-                            <img src={lab1}/>
+                            <img src={transpHex} className="transpHex"/>
+                            <span>3</span>
                         </div>
                         <div>
-                            <img src={yes}/>
+                            <img src={rightArrow}/>
                         </div>
                         <div>
-                            <img src={lab1}/>
+                        <img src={transpHex} className="transpHex"/>
+                            <span>4</span>
                         </div>
                     </div>
                     <p className="descr text-center">
@@ -88,6 +99,11 @@ class Work extends React.Component {
                         erat volutpat. Ut wisis enim ad minim veniam, quis nostrud exerci tution
                         ullamcorper suscipit.
                     </p>
+                </div>
+
+                <div>
+                    <Subscribe/>
+                    <Join/>
                 </div>
 
             </div>

@@ -17,26 +17,26 @@ class App extends Component {
     };
   }
 
-  prepareScrollQuote = () => {
-    this.myRef.current.scrollQuote();
-    this.setState({ 
+  prepareScrollToQuote = () => {
+    this.myRef.current.scrollToQuote();
+    this.setState({
       quote: true
-  })
+    })
   }
 
   render() {
-    
+
     return (
       <div className="App">
         <BrowserRouter>
           <div>
-            <Header prepareScroll={this.prepareScrollQuote.bind(this)}/>
+            <Header prepareScroll={this.prepareScrollToQuote} />
             <div className="min">
-              <Route exact path="/" render={()=><Home ref={this.myRef} quote={this.state.quote}/>}/>
-    <Route exact path="/presentation" render={()=><Presentaion ref={this.myRef} quote={this.state.quote}/>}/>
-              <Route exact path="/our-work" component={Work}/>              
-            </div>  
-            <Footer/>
+              <Route exact path="/" render={() => <Home ref={this.myRef} quote={this.state.quote} />} />
+              <Route exact path="/presentation" render={() => <Presentaion />} />
+              <Route exact path="/our-work" render={() => <Work />} />
+            </div>
+            <Footer />
           </div>
         </BrowserRouter>
       </div>

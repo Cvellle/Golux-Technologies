@@ -17,7 +17,7 @@ class Aboutus extends React.Component {
             <h2 className="text-center">
               We are <img src={logo} className="weareLogo"/>
             </h2>
-            <div class="d-sm-flex justify-content-sm-between">
+            <div className="d-sm-flex justify-content-sm-between">
               <p className="text-left col-sm-5 align-self-top d-none d-sm-block">             
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,

@@ -9,20 +9,14 @@ import insta from '../images/insta.svg';
 
 class Footer extends React.Component {
 
-    scrollup() {
+    scrollup = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
-        // var i = 10;
-        // var int = setInterval(function() {
-        //     window.scrollTo(0, i);
-        //     i += 1;
-        //     if (i <= 200) clearInterval(int);
-        // }, 20);
     }
 
     render() {  
         return (
             <footer className="footer">
-                <div class="d-sm-flex justify-content-sm-between">
+                <div className="d-sm-flex justify-content-sm-between">
                     <div className="">
                         <img src={logo} className="logo"/>
                     </div>
@@ -31,7 +25,7 @@ class Footer extends React.Component {
                     </div>
                 </div>
                 
-                <div class="footerContent d-sm-flex justify-content-sm-between mx-auto">
+                <div className="footerContent d-sm-flex justify-content-sm-between mx-auto">
 
                     <div className="col-sm-3 mx-auto justify-content-center firstColumn">
                         <p className="text-left mx-auto footerDescr">

@@ -68,6 +68,17 @@
     opacity: 1;
 }
 
+.inputDiv {
+    position: relative;
+}
+
+.inputDiv>img {
+    position: absolute;
+    top:35%;
+    right:5%;
+    height:25%;
+}
+
 input[type="checkbox"] {
     transform: scale(2.5);
     margin-left:3%;
@@ -187,6 +198,7 @@ input:focus, .textareaDiv:focus {
 
 .workAndServ img {
     width:7.3vw;
+    cursor: pointer;
 }
 
 .work img {

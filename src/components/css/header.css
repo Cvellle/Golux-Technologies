@@ -11,6 +11,12 @@
 .logoLink {
     -webkit-transform: translatey(0vw);
     width:10.5%;
+    transition:0.5s;
+}
+
+.logoLink:hover {
+    transition:0.5s;
+    filter:brightness(1.3);
 }
 
 .navRight {
@@ -31,6 +37,13 @@
     font-size: 1vw;
     font-weight: 800;
     box-shadow:0vw -0vw 0.4vw rgb(143, 142, 142); 
+    transition:0.5s;
+}
+
+.navRight button:hover {
+    transition:1s;
+    background:#d2165221;
+    filter:brightness(0.95);
 }
 
 .navRight button:focus {
@@ -42,6 +55,7 @@
     width:7.8%;
     margin-left: 11%;
     cursor:pointer;
+    transition:0.5s;
 }
 
 .hamburger {
@@ -49,7 +63,8 @@
 }
 
 .navRight img:hover {
-    filter:brightness(1.2);
+    transition:0.5s;
+    filter:brightness(1.5);
 }
 
 

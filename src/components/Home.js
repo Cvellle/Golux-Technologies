@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Lab from './Lab'
@@ -20,17 +19,11 @@ class Home extends React.Component {
     super(props)
   }
 
-  scrollQuote() {
-    // this.refs.quote.scrollIntoView({behavior: 'smooth'})
-    this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
-  }
-
-  componentDidMount() {
+  scrollToQuote() {
     this.props.quote ? this.refs.quote.scrollIntoView({behavior: 'smooth'}) : null
   }
 
   render() {
-    let { props, ref } = React.forwardRef((props, ref) => ({ props, ref }));
     return (
       <div>
         <div className="mainscreen">
@@ -51,10 +44,11 @@ class Home extends React.Component {
               <img src={mainImg} className="col-xs-12 d-none d-sm-flex justify-content-end"/>
             </div>  
             <Link to="/presentation">        
-              <button className="d-none d-sm-block mainBlockBtn justify-content-start">
+              <button className="d-none d-sm-block mainBlockBtn justify-content-sm-start">
+              <div className="shine d-none d-sm-block"></div>
                 LEARN MORE
               </button>
-              <button className="d-block d-sm-none"  ref="main">
+              <button className="d-block d-sm-none mainBlockBtn-Mob"  ref="main">
                 LEARN MORE
               </button>
               </Link>

@@ -17,7 +17,7 @@ class Join extends React.Component {
               <div className="text-left align-self-top">      
                   <p className="text-left">
                      Join <b>Golux Club</b><br/>
-                     and get special offers<br/>
+                     and get speciel offers<br/>
                      from our team
                   </p>       
                   <input type="button" value="JOIN"/>
